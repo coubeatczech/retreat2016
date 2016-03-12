@@ -189,13 +189,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-offset-3 col-lg-3 text-center">
-                  <h3>About dzogchen</h3>
-                  Slovo “dzogčhen” je z tibetštiny překládáno jako “úplná dokonalost”. Jeho význam odkazuje k pravé přirozenosti všech bytostí, k jejich “prvotnímu stavu”. Tento stav je od počátku svobodný a nezávislý na všech omezeních a podmíněno
-                </div>
+                  <h3><?php i("programme_h3_dz"); ?></h3>
+                  <?php i("programme_p_dz"); ?></div>
                 <div class="col-lg-3 text-center">
-                  <h3>About khaita</h3>
-                  about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita about khaita
-                </div>
+                  <h3><?php i("programme_h3_kh"); ?></h3>
+                  <?php i("programme_p_kh"); ?></div>
             </div>
         </div>
     </section>
@@ -204,13 +202,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Tibetan buddhism in heart of europe</h2>
+                    <h2 class="section-heading"><?php i("venue_h2"); ?></h2>
                     <hr class="light">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-										<p>Je to v hele královka. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent dapibus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Sed ac dolor sit</p>
+										<p><?php i("venue_p"); ?></p>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24088.72340978796!2d11.533485602929655!3d42.843908437901504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13291290407ce2a3%3A0x500ac86c73e194ac!2sAssociazione+Culturale+Comunita&#39;+Dzogchen!5e0!3m2!1scs!2scz!4v1457533766407" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
@@ -221,7 +219,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Help make the course possible</h2>
+                    <h2 class="section-heading"><?php i("donation_h2"); ?></h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -229,20 +227,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 text-center">
-                  <h3>Free</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent dapibus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Sed ac dolor sit amet purus malesuada congue. </p>
+                  <h3><?php i("donation_h3_1"); ?></h3>
+                  <p><?php i("donation_p1"); ?> </p>
                 </div>
                 <div class="col-lg-3 text-center">
-                  <h3>Basic generosity</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent dapibus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Sed ac dolor sit amet purus malesuada congue. </p>
+                  <h3><?php i("donation_h3_2"); ?></h3>
+                  <p><?php i("donation_p2"); ?> </p>
                 </div>
                 <div class="col-lg-3 text-center">
-                  <h3>Great generosity</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent dapibus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Sed ac dolor sit amet purus malesuada congue. </p>
+                  <h3><?php i("donation_h3_3"); ?></h3>
+                  <p><?php i("donation_p3"); ?> </p>
                 </div>
                 <div class="col-lg-3 text-center">
-                  <h3>Custom generosity</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent dapibus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Sed ac dolor sit amet purus malesuada congue. </p>
+                  <h3><?php i("donation_h3_4"); ?></h3>
+                  <p><?php i("donation_p4"); ?> </p>
                 </div>
             </div>
         </div>
@@ -252,7 +250,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Rozbal si karimatku nebo buď v hotelu</h2>
+                    <h2 class="section-heading"><?php i("accomodation_h2"); ?></h2>
                     <hr>
                 </div>
             </div>
@@ -260,8 +258,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-3 text-center">
-                  <h3>V hale</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent dapibus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Sed ac dolor sit amet purus malesuada congue. </p>
+                  <h3><?php i("accomodation_h3"); ?></h3>
+                  <p><?php i("accomodation_p"); ?> </p>
                 </div>
                 <div class="col-lg-3">
                   <h3 class="text-center">V hotelu</h3>
@@ -283,7 +281,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Kontakt</h2>
+                    <h2 class="section-heading"><?php i("contact_h2"); ?>Kontakt</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -291,12 +289,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-3 text-center">
-                  <h3>E-mail</h3>
-                  <p><a href="mail@retreat">Mail@retreat</a></p>
+                  <h3><?php i("contact_email_h3"); ?>E-mail</h3>
+                  <p><a href="mailto:<?php i("contact_email") ?>"><?php i("contact_email") ?></a></p>
                 </div>
                 <div class="col-lg-3 text-center">
-                  <h3>Telefon</h3>
-                  <p>+420 777 123 567</p>
+                  <h3><?php i("contact_h3"); ?>Telefon</h3>
+                  <p><?php i("contact_telephone"); ?></p>
                 </div>
             </div>
         </div>
