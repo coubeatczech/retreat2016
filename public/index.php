@@ -23,7 +23,7 @@
 	$mysqli->set_charset("utf8");
 	if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error; }
-	$result = $mysqli->query("select meta_key, meta_value from wp_postmeta where post_id = 4223 and meta_key like '" . $lang . "_%'");
+	$result = $mysqli->query("select meta_key, meta_value from wp_postmeta where post_id = 3724 and meta_key like '" . $lang . "_%'");
 
 	$results_array = array();
 	while ($row = $result->fetch_assoc()) {
