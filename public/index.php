@@ -115,7 +115,7 @@
             <div class="header-content-inner">
                 <h1><?php i("h1"); ?></h1>
                 <hr>
-                <p>Tibetský mistr Chogyal namkhai norbu přijede po 15 letech do Prahy předávat nauku dzogčhenu a taky si tu zatancujeme a vůbec to bude príma</p>
+                <p><?php i("h1_p"); ?></p>
                 <hr>
                 <h3>Nepřijďte o novinky, změny programu, atd.</h3>
                 <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
@@ -135,7 +135,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Living buddha teaches dzogchen around the globe</h2>
+                    <h2 class="section-heading"><?php i("teacher_h"); ?></h2>
                     <hr class="light">
                 </div>
             </div>
@@ -143,8 +143,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-offset-3 col-lg-3 text-center">
-                  <h3>Chogyal Namkhai Norbu</h3>
-                  Čhögjal Namkhai Norbu se narodil desátého dne, desátého měsíce roku Země a Tygra (8.12.1938) ve vesnici Geug, v okrese Čongra, v kraji Derge ve východním Tibetu. Jeho otec pocházel ze šlechtické rodiny a pracoval jako vládní úředník v Derge.
+                  <h3><?php i("teacher_h3"); ?></h3>
+									<?php i("teacher_p"); ?>
                 </div>
                 <div class="col-lg-3 text-center">
                   <img src="http://placehold.it/250x250">
@@ -157,7 +157,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Learn dzogchen teaching & have fun with joyful dances</h2>
+                    <h2 class="section-heading"><?php i("programme_h2"); ?></h2>
                     <hr class="primary">
                 </div>
             </div>
