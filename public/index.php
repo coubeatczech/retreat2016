@@ -1,6 +1,6 @@
 <?php
 
-	include "../database.php";
+	include "/var/www/retreat2016/database.php";
 
 	function redirect($url, $permanent = false) {
     header('Location: ' . "http://" . $_SERVER['HTTP_HOST'] . $url, true, $permanent ? 301 : 302);
@@ -10,9 +10,9 @@
 		$user_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 		switch ($user_lang){
 			case "cs":
-				redirect('/cs/', false);
+				redirect('/retreat/cs/', false);
 			default:
-				redirect('/en/', false);
+				redirect('/retreat/en/', false);
 				break; } }
 
 	$lang = $_GET["lang"];
@@ -51,18 +51,18 @@
     <title><?php i("title"); ?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/retreat/css/bootstrap.min.css" type="text/css">
 
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/retreat/font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="/retreat/css/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/creative.css" type="text/css">
+    <link rel="stylesheet" href="/retreat/css/creative.css" type="text/css">
 	
 		<style>
 			input.input { cursor: text; }
@@ -95,14 +95,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li> <a class="page-scroll" href="#teacher">Učitel</a> </li>
-                    <li> <a class="page-scroll" href="#program">Program</a> </li>
-                    <li> <a class="page-scroll" href="#venue">Místo konání</a> </li>
-                    <li> <a class="page-scroll" href="#fee">Vstupné</a> </li>
-                    <li> <a class="page-scroll" href="#accomodation">Ubytování</a> </li>
-                    <li> <a class="page-scroll" href="#contact">Kontakt</a> </li>
-                    <li> <a class="page-scroll" href="https://www.dzogchen.cz/">Původní stránky >></a> </li>
-                    <li> <a class="page-scroll" href="">English</a> </li>
+                    <li> <a class="page-scroll" href="#teacher"><?php i("menu_teacher"); ?></a> </li>
+                    <li> <a class="page-scroll" href="#program"><?php i("menu_program"); ?></a> </li>
+                    <li> <a class="page-scroll" href="#venue"><?php i("menu_venue"); ?></a> </li>
+                    <li> <a class="page-scroll" href="#fee"><?php i("menu_fee"); ?></a> </li>
+                    <li> <a class="page-scroll" href="#accomodation"><?php i("menu_accomodation"); ?></a> </li>
+                    <li> <a class="page-scroll" href="#contact"><?php i("menu_contact"); ?></a> </li>
+                    <li> <a class="page-scroll" href="https://www.dzogchen.cz/"><?php i("menu_original_page"); ?></a> </li>
+                    <li> <a class="page-scroll" href="<?php i("menu_lang_link"); ?>")"><?php i("menu_lang"); ?></a> </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -301,18 +301,18 @@
     </section>
 
     <!-- jQuery -->
-    <script src="/js/jquery.js"></script>
+    <script src="/retreat/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/retreat/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="/js/jquery.easing.min.js"></script>
-    <script src="/js/jquery.fittext.js"></script>
-    <script src="/js/wow.min.js"></script>
+    <script src="/retreat/js/jquery.easing.min.js"></script>
+    <script src="/retreat/js/jquery.fittext.js"></script>
+    <script src="/retreat/js/wow.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="/js/creative.js"></script>
+    <script src="/retreat/js/creative.js"></script>
 
 </body>
 

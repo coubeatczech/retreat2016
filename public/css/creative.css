@@ -178,7 +178,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(/retreat/dzam2015_1.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -191,6 +191,10 @@ header .header-content {
     width: 100%;
     padding: 100px 15px;
     text-align: center;
+}
+
+header .header-content .header-content-inner {
+	padding-left: 25%;
 }
 
 header .header-content .header-content-inner h1 {
