@@ -89,7 +89,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Logo international dc</a>
+                <a class="navbar-brand page-scroll" href="#page-top"><?php i("menu_dc"); ?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -102,15 +102,14 @@
                     <li> <a class="page-scroll" href="#accomodation"><?php i("menu_accomodation"); ?></a> </li>
                     <li> <a class="page-scroll" href="#contact"><?php i("menu_contact"); ?></a> </li>
                     <li> <a class="page-scroll" href="https://www.dzogchen.cz/"><?php i("menu_original_page"); ?></a> </li>
-                    <li> <a class="page-scroll" href="<?php i("menu_lang_link"); ?>")"><?php i("menu_lang"); ?></a> </li>
+                    <li> <a class="page-scroll" href="<?php i("menu_lang_link"); ?>"><?php i("menu_lang"); ?></a> </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
     <header>
+				<div class="mobile-image" ></div>
         <div class="header-content">
             <div class="header-content-inner">
                 <h1><?php i("h1"); ?></h1>
@@ -120,12 +119,12 @@
         </div>
     </header>
 
-    <section class="bg-primary" id="teacher">
+    <section id="teacher">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading"><?php i("teacher_h"); ?></h2>
-                    <hr class="light">
+                    <hr>
                 </div>
             </div>
         </div>
@@ -152,13 +151,15 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-offset-3 col-lg-3 text-center">
+            <div class="row text-center">
+                <div class="col-lg-6">
                   <h3><?php i("programme_h3_dz"); ?></h3>
-                  <?php i("programme_p_dz"); ?></div>
-                <div class="col-lg-3 text-center">
+                  <?php i("programme_p_dz"); ?>
+								</div>
+                <div class="col-lg-6">
                   <h3><?php i("programme_h3_kh"); ?></h3>
-                  <?php i("programme_p_kh"); ?></div>
+                  <?php i("programme_p_kh"); ?>
+								</div>
             </div>
         </div>
     </section>
@@ -193,7 +194,21 @@
             <div class="row">
                 <div class="col-lg-3 text-center">
                   <h3><?php i("donation_h3_1"); ?></h3>
-                  <p><?php i("donation_p1"); ?> </p>
+                  <p><?php i("donation_p1"); ?> 
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="yellow@dzogchen.cz">
+<input type="hidden" name="lc" value="CZ">
+<input type="hidden" name="item_name" value="Retreat 2016 Chogyal Namkhai Norbu Praha">
+<input type="hidden" name="amount" value="100.00">
+<input type="hidden" name="currency_code" value="CZK">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</p>
                 </div>
                 <div class="col-lg-3 text-center">
                   <h3><?php i("donation_h3_2"); ?></h3>
@@ -265,19 +280,17 @@
         </div>
     </section>
 
-    <!-- jQuery -->
+<!--
     <script src="/retreat/js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
     <script src="/retreat/js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
     <script src="/retreat/js/jquery.easing.min.js"></script>
     <script src="/retreat/js/jquery.fittext.js"></script>
     <script src="/retreat/js/wow.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
     <script src="/retreat/js/creative.js"></script>
+-->
 
 </body>
 
