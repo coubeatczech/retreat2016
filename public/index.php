@@ -96,7 +96,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li> <a class="page-scroll" href="#teacher"><?php i("menu_teacher"); ?></a> </li>
-                    <li> <a class="page-scroll" href="#program"><?php i("menu_program"); ?></a> </li>
+                    <li> <a class="page-scroll" href="#program"><?php i("menu_programme"); ?></a> </li>
                     <li> <a class="page-scroll" href="#venue"><?php i("menu_venue"); ?></a> </li>
                     <li> <a class="page-scroll" href="#fee"><?php i("menu_fee"); ?></a> </li>
                     <li> <a class="page-scroll" href="#accomodation"><?php i("menu_accomodation"); ?></a> </li>
@@ -116,17 +116,6 @@
                 <h1><?php i("h1"); ?></h1>
                 <hr>
                 <p><?php i("h1_p"); ?></p>
-                <hr>
-                <h3>Nepřijďte o novinky, změny programu, atd.</h3>
-                <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
-                    <!-- Email field (required) -->
-                    <input type="text" class="input btn btn-default btn-xl" name="email" placeholder="Váš e-mail" />
-                    <!-- Campaign token -->
-                    <!-- Get the token at: https://app.getresponse.com/campaign_list.html -->
-                    <input type="hidden" name="campaign_token" value="pSCBw" />
-                    <!-- Subscriber button -->
-                    <input type="submit" href="#about" class="btn btn-primary btn-xl page-scroll" value="Dostávat info" />
-                </form>
             </div>
         </div>
     </header>
@@ -159,30 +148,6 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading"><?php i("programme_h2"); ?></h2>
                     <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-3">
-                    <h4>12.8.2016</h4>
-                    <p><strong>10:00</strong> Nauka</p>
-                    <p><strong>17:00</strong> Khaita</p>
-                </div>
-                <div class="col-lg-3">
-                    <h4>13.8.2016</h4>
-                    <p><strong>10:00</strong> Nauka</p>
-                    <p><strong>17:00</strong> Khaita</p>
-                </div>
-                <div class="col-lg-3">
-                    <h4>14.8.2016</h4>
-                    <p><strong>10:00</strong> Nauka</p>
-                    <p><strong>17:00</strong> Khaita</p>
-                </div>
-                <div class="col-lg-3">
-                    <h4>15.8.2016</h4>
-                    <p><strong>15:00</strong> Nauka</p>
-                    <p><strong>17:00</strong> Krátká ganapúdža</p>
                 </div>
             </div>
         </div>
