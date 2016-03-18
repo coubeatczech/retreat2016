@@ -51,6 +51,9 @@
     <title><?php i("title"); ?></title>
 
     <!-- Bootstrap Core CSS -->
+
+    <link rel="stylesheet" href="/retreat/fnt/stylesheet.css" type="text/css">
+
     <link rel="stylesheet" href="/retreat/css/bootstrap.min.css" type="text/css">
 
     <!-- Custom Fonts -->
@@ -89,7 +92,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><?php i("menu_dc"); ?></a>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src="/retreat/<?php i("menu_dc"); ?>" /></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -97,9 +100,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li> <a class="page-scroll" href="#teacher"><?php i("menu_teacher"); ?></a> </li>
                     <li> <a class="page-scroll" href="#program"><?php i("menu_programme"); ?></a> </li>
-                    <li> <a class="page-scroll" href="#venue"><?php i("menu_venue"); ?></a> </li>
                     <li> <a class="page-scroll" href="#fee"><?php i("menu_fee"); ?></a> </li>
-                    <li> <a class="page-scroll" href="#accomodation"><?php i("menu_accomodation"); ?></a> </li>
+                    <li> <a class="page-scroll" href="#venue"><?php i("menu_venue"); ?></a> </li>
                     <li> <a class="page-scroll" href="#contact"><?php i("menu_contact"); ?></a> </li>
                     <li> <a class="page-scroll" href="https://www.dzogchen.cz/"><?php i("menu_original_page"); ?></a> </li>
                     <li> <a class="page-scroll" href="<?php i("menu_lang_link"); ?>"><?php i("menu_lang"); ?></a> </li>
@@ -122,20 +124,25 @@
     <section id="teacher">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-xs-12 text-center">
                     <h2 class="section-heading"><?php i("teacher_h"); ?></h2>
                     <hr>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-offset-3 col-lg-3 text-center">
-                  <h3><?php i("teacher_h3"); ?></h3>
-									<?php i("teacher_p"); ?>
+            <div class="row text-center">
+								<div class="col-lg-3">
+									<?php i("teacher_col_1"); ?>
                 </div>
-                <div class="col-lg-3 text-center">
-                  <img src="http://placehold.it/250x250">
+                <div class="col-lg-3">
+									<?php i("teacher_col_2"); ?>
+                </div>
+                <div class="col-lg-3">
+									<?php i("teacher_col_4"); ?>
+                </div>
+                <div class="col-lg-3">
+                  <img src="/retreat/cnn_250x250.jpg" />
                 </div>
             </div>
         </div>
@@ -144,39 +151,31 @@
     <section id="program">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-xs-12 text-center">
                     <h2 class="section-heading"><?php i("programme_h2"); ?></h2>
                     <hr class="primary">
+										<p><?php i("programme_general"); ?></p>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-6">
+                <div class="col-lg-3">
                   <h3><?php i("programme_h3_dz"); ?></h3>
-                  <?php i("programme_p_dz"); ?>
+                  <p><?php i("programme_p_dz"); ?></p>
 								</div>
-                <div class="col-lg-6">
+                <div class="col-lg-3">
                   <h3><?php i("programme_h3_kh"); ?></h3>
-                  <?php i("programme_p_kh"); ?>
+                  <p><?php i("programme_p_kh"); ?></p>
 								</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="venue" class="bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading"><?php i("venue_h2"); ?></h2>
-                    <hr class="light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-										<p><?php i("venue_p"); ?></p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24088.72340978796!2d11.533485602929655!3d42.843908437901504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13291290407ce2a3%3A0x500ac86c73e194ac!2sAssociazione+Culturale+Comunita&#39;+Dzogchen!5e0!3m2!1scs!2scz!4v1457533766407" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+                <div class="col-lg-3">
+                  <h3><?php i("programme_h3_vd"); ?></h3>
+                  <p><?php i("programme_p_vd"); ?></p>
+								</div>
+                <div class="col-lg-3">
+                  <h3><?php i("programme_h3_yy"); ?></h3>
+                  <p><?php i("programme_p_yy"); ?></p>
+								</div>
             </div>
         </div>
     </section>
@@ -184,83 +183,55 @@
     <section id="fee">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-xs-12 text-center">
                     <h2 class="section-heading"><?php i("donation_h2"); ?></h2>
                     <hr class="primary">
+										<p><?php i("donation_p"); ?> </p>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 text-center">
-                  <h3><?php i("donation_h3_1"); ?></h3>
-                  <p><?php i("donation_p1"); ?> 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="yellow@dzogchen.cz">
-<input type="hidden" name="lc" value="CZ">
-<input type="hidden" name="item_name" value="Retreat 2016 Chogyal Namkhai Norbu Praha">
-<input type="hidden" name="amount" value="100.00">
-<input type="hidden" name="currency_code" value="CZK">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-</p>
-                </div>
-                <div class="col-lg-3 text-center">
-                  <h3><?php i("donation_h3_2"); ?></h3>
-                  <p><?php i("donation_p2"); ?> </p>
-                </div>
-                <div class="col-lg-3 text-center">
-                  <h3><?php i("donation_h3_3"); ?></h3>
-                  <p><?php i("donation_p3"); ?> </p>
-                </div>
-                <div class="col-lg-3 text-center">
-                  <h3><?php i("donation_h3_4"); ?></h3>
-                  <p><?php i("donation_p4"); ?> </p>
-                </div>
+            <div class="row text-center">
+									<div class="col-sm-6">
+										<h3><?php i("donation_h3_1"); ?></h3>
+										<p><?php i("donation_p1"); ?> </p>
+									</div>
+									<div class="col-sm-6">
+										<h3><?php i("donation_h3_2"); ?></h3>
+										<p><?php i("donation_p2"); ?> </p>
+									</div>
             </div>
         </div>
     </section>
 
-    <section id="accomodation">
+
+    <section id="venue">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading"><?php i("accomodation_h2"); ?></h2>
+                    <h2 class="section-heading"><?php i("venue_h2"); ?></h2>
                     <hr>
                 </div>
             </div>
-        </div>
-        <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-lg-offset-3 text-center">
-                  <h3><?php i("accomodation_h3"); ?></h3>
-                  <p><?php i("accomodation_p"); ?> </p>
+                <div class="col-xs-12 col-md-offset-3 col-md-6">
+										<p><?php i("venue_p"); ?></p>
                 </div>
-                <div class="col-lg-3">
-                  <h3 class="text-center">V hotelu</h3>
-                  <ul>
-                    <li><a href="">Hotel 1</a></li>
-                    <li><a href="">Hotel 1</a></li>
-                    <li><a href="">Hotel 1</a></li>
-                    <li><a href="">Hotel 1</a></li>
-                    <li><a href="">Hotel 1</a></li>
-                    <li><a href="">Hotel 1</a></li>
-                    <li><a href="">Hotel 1</a></li>
-                  </ul>
+                <div class="col-md-offset-3 col-md-3">
+										<?php i("venue_col_1"); ?>
+                </div>
+                <div class="col-md-3">
+										<?php i("venue_col_2"); ?>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-xs-12 text-center">
                     <h2 class="section-heading"><?php i("contact_h2"); ?>Kontakt</h2>
                     <hr class="primary">
                 </div>
@@ -268,19 +239,27 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-lg-offset-3 text-center">
-                  <h3><?php i("contact_email_h3"); ?>E-mail</h3>
-                  <p><a href="mailto:<?php i("contact_email") ?>"><?php i("contact_email") ?></a></p>
-                </div>
-                <div class="col-lg-3 text-center">
-                  <h3><?php i("contact_h3"); ?>Telefon</h3>
-                  <p><?php i("contact_telephone"); ?></p>
-                </div>
+								<div class="col-md-3 text-center">
+									<h3><?php i("contact_email_h3"); ?></h3>
+									<p><a href="mailto:<?php i("contact_email") ?>"><?php i("contact_email") ?></a></p>
+								</div>
+								<div class="col-md-3 text-center">
+									<h3><?php i("contact_telephone_h3"); ?></h3>
+									<p><?php i("contact_telephone"); ?></p>
+								</div>
+								<div class="col-md-3 text-center">
+									<h3><?php i("contact_organizer_h3"); ?></h3>
+									<address><?php i("contact_organizer_p"); ?></address>
+								</div>
+								<div class="col-md-3 text-center">
+									<h3><?php i("contact_social"); ?></h3>
+									<p><a href="https://www.facebook.com/Dzog%C4%8Dhen-533211303376199/">
+										<img src="/retreat/img/FB-f-Logo__blue_58.png" /></a></p>
+								</div>
             </div>
         </div>
     </section>
 
-<!--
     <script src="/retreat/js/jquery.js"></script>
 
     <script src="/retreat/js/bootstrap.min.js"></script>
@@ -290,7 +269,6 @@
     <script src="/retreat/js/wow.min.js"></script>
 
     <script src="/retreat/js/creative.js"></script>
--->
 
 </body>
 
