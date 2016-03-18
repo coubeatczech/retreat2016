@@ -52,7 +52,7 @@
 
     <!-- Bootstrap Core CSS -->
 
-    <link rel="stylesheet" href="/retreat/fnt/stylesheet.css" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="/retreat/css/bootstrap.min.css" type="text/css">
 
@@ -112,16 +112,21 @@
 
     <header>
 				<div class="mobile-image" ></div>
+				<div class="strips"></div>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1><?php i("h1"); ?></h1>
+							<div class="inner">
+									<h1><?php i("h1"); ?></h1>
+									<div class="h1-p1"><?php i("h1_p1"); ?></div>
+									<div class="h1-p2"><?php i("h1_p2"); ?></div>
                 <hr>
                 <p><?php i("h1_p"); ?></p>
+							</div>
             </div>
         </div>
     </header>
 
-    <section id="teacher">
+    <section id="teacher" class="primary">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
@@ -131,7 +136,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="row text-center">
+            <div class="row">
 								<div class="col-lg-3">
 									<?php i("teacher_col_1"); ?>
                 </div>
@@ -151,15 +156,15 @@
     <section id="program">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><?php i("programme_h2"); ?></h2>
+                <div class="col-xs-12">
+                    <h2 class="section-heading text-center"><?php i("programme_h2"); ?></h2>
                     <hr class="primary">
 										<p><?php i("programme_general"); ?></p>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row text-center">
+            <div class="row">
                 <div class="col-lg-3">
                   <h3><?php i("programme_h3_dz"); ?></h3>
                   <p><?php i("programme_p_dz"); ?></p>
@@ -180,7 +185,7 @@
         </div>
     </section>
 
-    <section id="fee">
+    <section id="fee" class="primary">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
@@ -228,7 +233,7 @@
     </section>
 
 
-    <section id="contact">
+    <section id="contact" class="primary">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
@@ -239,19 +244,19 @@
         </div>
         <div class="container">
             <div class="row">
-								<div class="col-md-3 text-center">
+								<div class="col-md-3">
 									<h3><?php i("contact_email_h3"); ?></h3>
 									<p><a href="mailto:<?php i("contact_email") ?>"><?php i("contact_email") ?></a></p>
 								</div>
-								<div class="col-md-3 text-center">
+								<div class="col-md-3">
 									<h3><?php i("contact_telephone_h3"); ?></h3>
 									<p><?php i("contact_telephone"); ?></p>
 								</div>
-								<div class="col-md-3 text-center">
+								<div class="col-md-3">
 									<h3><?php i("contact_organizer_h3"); ?></h3>
 									<address><?php i("contact_organizer_p"); ?></address>
 								</div>
-								<div class="col-md-3 text-center">
+								<div class="col-md-3">
 									<h3><?php i("contact_social"); ?></h3>
 									<p><a href="https://www.facebook.com/Dzog%C4%8Dhen-533211303376199/">
 										<img src="/retreat/img/FB-f-Logo__blue_58.png" /></a></p>
