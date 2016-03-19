@@ -23,7 +23,7 @@
 	$mysqli->set_charset("utf8");
 	if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error; }
-	$result = $mysqli->query("select meta_key, meta_value from wp_postmeta where post_id = 3724 and meta_key like '" . $lang . "_%'");
+	$result = $mysqli->query("select meta_key, meta_value from wp_postmeta where post_id = 4866 and meta_key like '" . $lang . "_%'");
 
 	$results_array = array();
 	while ($row = $result->fetch_assoc()) {
@@ -103,7 +103,7 @@
                     <li> <a class="page-scroll" href="#fee"><?php i("menu_fee"); ?></a> </li>
                     <li> <a class="page-scroll" href="#venue"><?php i("menu_venue"); ?></a> </li>
                     <li> <a class="page-scroll" href="#contact"><?php i("menu_contact"); ?></a> </li>
-                    <li> <a class="page-scroll" href="https://www.dzogchen.cz/"><?php i("menu_original_page"); ?></a> </li>
+                    <li> <a class="page-scroll" href="/nauka/program-akci-ceske-komunity/"><?php i("menu_original_page"); ?></a> </li>
                     <li> <a class="page-scroll" href="<?php i("menu_lang_link"); ?>"><?php i("menu_lang"); ?></a> </li>
                 </ul>
             </div>
@@ -237,7 +237,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><?php i("contact_h2"); ?>Kontakt</h2>
+                    <h2 class="section-heading"><?php i("contact_h2"); ?></h2>
                     <hr class="primary">
                 </div>
             </div>
