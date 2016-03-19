@@ -250,10 +250,18 @@
 									<p><a href="mailto:<?php i("contact_email") ?>"><?php i("contact_email") ?></a></p>
 								</div>
 								<div class="col-md-3">
-									<h3><?php i("contact_telephone_h3"); ?></h3>
-<i class="fa fa-phone fa-3x"></i>
-									<p>
-<?php i("contact_telephone"); ?></p>
+									<h3><?php i("subscribe_h3"); ?></h3>
+									<p> 
+
+		<?php i("subscribe_p"); ?>
+<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="form-inline subscribe">
+	<div class="form-group">
+		<input type="hidden" name="campaign_token" value="<?php i("campaign"); ?>" class="form-control" />
+		<input class="form-control btn btn-default sub-input" type="text" name="email" placeholder="<?php i("subscribe_placeholder"); ?>"/>
+		<input class="form-control btn btn-default"  type="submit" value="<?php i("subscribe_confirm"); ?>"/>
+	</div>
+</form>
+</p>
 								</div>
 								<div class="col-md-3">
 									<h3><?php i("contact_organizer_h3"); ?></h3>
@@ -265,21 +273,6 @@
 										<img src="/retreat/img/FB-f-Logo__blue_58.png" /></a></p>
 								</div>
             </div>
-            <div class="row">
-	<div class="col-sm-offset-3 col-sm-6">
-	<h3 class="text-center"><?php i("subscribe_h3"); ?></h3>
-	<p>
-		<?php i("subscribe_p"); ?>
-	</p>
-<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="form-inline subscribe">
-	<div class="form-group">
-		<input type="hidden" name="campaign_token" value="<?php i("campaign"); ?>" class="form-control" />
-		<input class="form-control btn btn-default sub-input" type="text" name="email" placeholder="<?php i("subscribe_placeholder"); ?>"/>
-		<input class="form-control btn btn-default"  type="submit" value="<?php i("subscribe_confirm"); ?>"/>
-	</div>
-</form>
-						</div>
-</div>
         </div>
     </section>
 

@@ -48,6 +48,7 @@ h6 {
 input.form-control {
   margin-bottom: 20px;
   width: auto;
+  border: 1px solid #002446;
   max-width: 300px; }
 
 p {
@@ -288,9 +289,6 @@ margin-bottom: 10px;
   line-height: 1.5;
   }
 }
-
-form.subscribe {
-  text-align: center; }
 
   header .header-content .header-content-inner .h1-p2 {
     line-height: 1;
