@@ -130,8 +130,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><?php i("teacher_h"); ?></h2>
+                    <h2 class="section-heading"><span class="menu-repeat"><?php i("menu_teacher"); ?></span>
+
                     <hr>
+<?php i("teacher_h"); ?></h2>
                 </div>
             </div>
         </div>
@@ -157,8 +159,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h2 class="section-heading text-center"><?php i("programme_h2"); ?></h2>
-                    <hr class="primary">
+                    <h2 class="section-heading text-center">
+<span class="menu-repeat">
+<?php i("menu_programme"); ?>
+</span>
+
+                    <hr>
+<?php i("programme_h2"); ?></h2>
 										<p><?php i("programme_general"); ?></p>
                 </div>
             </div>
@@ -189,8 +196,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><?php i("donation_h2"); ?></h2>
-                    <hr class="primary">
+                    <h2 class="section-heading">
+
+<span class="menu-repeat">
+<?php i("menu_fee"); ?>
+</span>
+
+                    <hr>
+<?php i("donation_h2"); ?></h2>
 										<p><?php i("donation_p"); ?> </p>
                 </div>
             </div>
@@ -214,8 +227,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading"><?php i("venue_h2"); ?></h2>
+                    <h2 class="section-heading">
+<span class="menu-repeat">
+<?php i("menu_venue"); ?>
+</span>
                     <hr>
+<?php i("venue_h2"); ?></h2>
                 </div>
             </div>
             <div class="row">
@@ -237,7 +254,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <h2 class="section-heading"><?php i("contact_h2"); ?>Kontakt</h2>
+                    <h2 class="section-heading">
+<?php i("contact_h2"); ?>Kontakt</h2>
                     <hr class="primary">
                 </div>
             </div>
