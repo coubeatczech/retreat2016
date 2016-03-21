@@ -103,7 +103,7 @@
                     <li> <a class="page-scroll" href="#fee"><?php i("menu_fee"); ?></a> </li>
                     <li> <a class="page-scroll" href="#venue"><?php i("menu_venue"); ?></a> </li>
                     <li> <a class="page-scroll" href="#contact"><?php i("menu_contact"); ?></a> </li>
-                    <li> <a class="page-scroll" href="/nauka/program-akci-ceske-komunity/"><?php i("menu_original_page"); ?></a> </li>
+                    <li> <a class="page-scroll" href="/aktuality/puvodni-homepage/"><?php i("menu_original_page"); ?></a> </li>
                     <li> <a class="page-scroll" href="<?php i("menu_lang_link"); ?>"><?php i("menu_lang"); ?></a> </li>
                 </ul>
             </div>
