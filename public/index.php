@@ -269,7 +269,7 @@
 								</div>
 								<div class="col-md-3">
 									<h3><?php i("contact_social"); ?></h3>
-									<p><a href="https://www.facebook.com/Dzog%C4%8Dhen-533211303376199/">
+									<p><a href="https://www.facebook.com/events/914385668683147/">
 										<img src="/retreat/img/FB-f-Logo__blue_58.png" /></a></p>
 								</div>
             </div>
