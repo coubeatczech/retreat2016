@@ -94,6 +94,17 @@ aside {
   padding-bottom:25px;
   } }
 
+.supertitle {
+  text-align: center; }
+
+.menu-repeat {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 20px;
+  }
+
 .navbar-default {
     border-color: rgba(34,34,34,.05);
     /*font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;*/
