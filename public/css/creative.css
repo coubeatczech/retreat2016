@@ -19,7 +19,7 @@ body {
 hr {
     max-width: 300px;
     border-width: 1px;
-    border-color: white;
+    border-color: black;
   
 }
 @media (min-width: 992px) {
@@ -340,9 +340,6 @@ header .header-content .header-content-inner p {
     header {
         min-height: 100%;
     }
-
-    hr {
-      border-color: black; }
 
     header .header-content {
         position: absolute;
