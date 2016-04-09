@@ -269,6 +269,7 @@
 									<p><a href="mailto:<?php i("contact_email") ?>"><?php i("contact_email") ?></a></p>
 								</div>
 								<div class="col-md-3">
+<!--
 									<h3><?php i("subscribe_h3"); ?></h3>
 									<p> 
 
@@ -281,6 +282,7 @@
 	</div>
 </form>
 </p>
+-->
 								</div>
 								<div class="col-md-3">
 									<h3><?php i("contact_organizer_h3"); ?></h3>
