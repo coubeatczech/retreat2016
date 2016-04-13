@@ -7,6 +7,10 @@
 (function($) {
     "use strict"; // Start of use strict
 
+    // navigate to #fee if on that page
+    if (window.location.hash == "#fee") {
+      $("html, body").scrollTop($("#fee").offset().top - 50); }
+
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
