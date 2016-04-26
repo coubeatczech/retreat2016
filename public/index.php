@@ -110,7 +110,7 @@
     </nav>
 
     <header>
-				<div class="mobile-image" ></div>
+				<div class="mobile-image"></div>
 				<div class="strips"></div>
         <div class="header-content">
             <div class="header-content-inner">
@@ -120,6 +120,11 @@
 									<div class="h1-p2"><?php i("h1_p2"); ?></div>
                 <hr>
                 <p><?php i("h1_p"); ?></p>
+								<div class="find-more">
+									<a href="#teacher" class="btn btn-primary btn-xl page-scroll">
+										<?php i("find_out_more"); ?>
+									</a>
+								</div>
 							</div>
             </div>
         </div>
@@ -159,13 +164,27 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h2 class="section-heading text-center">
-<span class="menu-repeat">
-<?php i("menu_programme"); ?>
-</span>
-
-                    <hr>
-<?php i("programme_h2"); ?></h2>
+												<span class="menu-repeat">
+												<?php i("menu_programme"); ?>
+												</span>
+												<hr>
+												<?php i("programme_h2"); ?></h2>
 										<p><?php i("programme_general"); ?></p>
+                </div>
+								<div class="col-xs-12 col-md-6 col-lg-3">
+									<?php i("programme_day_1"); ?>
+								</div>
+								<div class="col-xs-12 col-md-6 col-lg-3">
+									<?php i("programme_day_2"); ?>
+								</div>
+								<div class="col-xs-12 col-md-6 col-lg-3">
+									<?php i("programme_day_3"); ?>
+								</div>
+								<div class="col-xs-12 col-md-6 col-lg-3">
+									<?php i("programme_day_4"); ?>
+								</div>
+								<div class="col-xs-12">
+										<p><?php i("programme_after_schedule"); ?>
                 </div>
             </div>
         </div>
@@ -238,10 +257,10 @@
                 <div class="col-xs-12 col-md-offset-3 col-md-6">
 										<p><?php i("venue_p"); ?></p>
                 </div>
-                <div class="col-md-offset-3 col-md-3">
+                <div class="col-md-6">
 										<?php i("venue_col_1"); ?>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6">
 										<?php i("venue_col_2"); ?>
                 </div>
             </div>

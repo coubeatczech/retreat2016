@@ -59,6 +59,12 @@ p {
 }
 
 
+div.find-more {
+  margin-top: 40px;
+  width: 100%; }
+div.find-more a {
+  text-align: center; }
+
 section.primary {
     background-color: white;
 }
@@ -531,9 +537,11 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
+/*
     border-color: #ed431f;
     color: #fff;
     background-color: #ee4b28;
+*/
 }
 
 .btn-primary:active,

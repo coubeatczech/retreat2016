@@ -20,6 +20,12 @@
         event.preventDefault();
     });
 
+/*
+    $('div.find-more a').click(function (event) {
+      event.preventDefault();
+      $("html, body").scrollTop($("#teacher").offset().top - 50); });
+*/
+
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
