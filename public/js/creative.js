@@ -7,6 +7,10 @@
 (function($) {
     "use strict"; // Start of use strict
 
+    // navigate to #fee if on that page
+    if (window.location.hash == "#fee") {
+      $("html, body").scrollTop($("#fee").offset().top - 50); }
+
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -15,6 +19,12 @@
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
     });
+
+/*
+    $('div.find-more a').click(function (event) {
+      event.preventDefault();
+      $("html, body").scrollTop($("#teacher").offset().top - 50); });
+*/
 
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
@@ -28,12 +38,14 @@
     });
 
     // Fit Text Plugin for Main Header
+    /*
     $("h1").fitText(
         1.2, {
             minFontSize: '35px',
             maxFontSize: '65px'
         }
     );
+    */
 
     // Offset for Main Navigation
     $('#mainNav').affix({
