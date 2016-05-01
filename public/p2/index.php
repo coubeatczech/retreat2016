@@ -421,6 +421,9 @@ areál Výstaviště Praha Holešovice, 170 00, Praha 7. </p>
 				</ul>
 			</div>
 		</section>
+		<section id="registrace">
+			<iframe src="https://docs.google.com/forms/d/1ARw0RrqICmpBYJTww1Sb1kiyOtVikMhdMKDVYt9Rurc/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+		</section>
 		<footer id="contact" class="red">
 			<div class="center">
 				<h4>Kontakt</h4>
