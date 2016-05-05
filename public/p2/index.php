@@ -51,9 +51,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-</style>
-
-<style>
 
 	strong {font-weight: bold;}
 
@@ -69,6 +66,7 @@ table {
 		float: right;
 		margin-right: 132px; }
 	header nav div a { 
+		font-family: "Open Sans";
 		color: white; 
 		text-transform: uppercase;
 		text-decoration: none; }
