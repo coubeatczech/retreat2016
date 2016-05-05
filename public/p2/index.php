@@ -4,6 +4,9 @@
 
 <meta charset="utf-8" />
 
+<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 <style>
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -54,9 +57,9 @@ table {
 
 	strong {font-weight: bold;}
 
-	h4, h5 { font-family: "Times new roman"; }
+	h4, h5, h6 { font-family: "Libre Baskerville"; }
 	header {
-		font-family: Arial;
+		font-family: 'Open Sans';
 		background-color: #840c20; }
 	header nav {
 		color: white;
@@ -78,7 +81,7 @@ table {
 		width: 100%; }
 	div#rinpoche { position: relative; }
 	div#header { 
-		font-family: "Times new roman";
+		font-family: "Libre Baskerville";
 		position: absolute;
 		top: 20%;
 		left: 45%;
@@ -89,8 +92,9 @@ table {
 	div#header h2 { font-size: 40px; }
 	div#header h3 { font-size: 30px; }
 	div#header hr { width: 100px; }
-	div#header p {  }
-	div.clear { clear: both; }
+	div.clear, span.clear { 
+		display: block;
+		clear: both; }
 	div.stripe { 
 		background-image: url("/img/stripe.png"); 
 		background-repeat: repeat-x; 
@@ -115,12 +119,12 @@ table {
 		margin-top: 20px; }
 	section hr, footer hr {
 		border: 0;
-		height: 1px;
-		border-top: 1px solid black; }
+		height: 2px;
+		border-top: 2px solid black; }
 
 	main section {
 		width: 100%; }
-	main section div.center {
+	main section div.center, footer div.center {
 		position: relative;
 		width: 1000px;
 		margin: 0px auto; }
@@ -128,7 +132,7 @@ table {
 		width: 1000px; 
 		position: relative; }
 	.gray {
-		background-color: #dedfe0; }
+		background-color: #fcf1c9; }
 	.red {
 		color: white;
 		background-color: #840c20; }
@@ -137,9 +141,6 @@ table {
 		position: relative;
 		right: 50px;
 		display: table-row }
-	.table-row img {
-		display: block;
-		margin: 0px auto }
 	.table-row div {
 		width: 300px;
 		vertical-align: top;
@@ -156,12 +157,13 @@ table {
 		margin: 0px auto; }
 
 	p { 
-		font-family: Arial;
+		font-family: 'Open Sans';
 		line-height: 1.3em; }
 	
 	section#teacher hr { width: 400px; }
 	section#teacher p.q {
-		font-size: 1.2em;
+		font-family: 'Libre Baskerville';
+		font-size: 1.3em;
 		font-style: italic;
 		margin: 0px auto;
 		text-align: center;
@@ -174,6 +176,9 @@ table {
 		width: 350px; }
 	section#teacher h6 {
 		margin-top: 15px; }
+	section#teacher div.table-row img {
+		display: block;
+		margin: 0px auto }
 
 	section#programme hr { width: 200px; }
 	section#programme p.standalone { 
@@ -182,8 +187,10 @@ table {
 	section#programme p.after-programme { margin-top: 35px; }
 	section#programme p { text-align: center; }
 	section#programme hr.after-programme { 
-		width: 400px ;
+		width: 400px;
 		margin: 20px auto; }
+	section#programme ul li {
+		font-family: 'Open Sans'; }
 
 	section#activities .right-side {
 		padding-left: 10px; }
@@ -191,14 +198,30 @@ table {
 		padding-right: 10px;
 		text-align: right; }
 	section#activities .table-row div { padding-bottom: 55px; }
-	section#activities .table-row div h6 { margin-top: 50px; }
+	section#activities .table-row div h6 { margin: 50px 0px 0px 0px; }
+	section#activities .table-row p { margin-top: 15px; }
 	section#activities .video-left { position: relative; }
 	section#activities .video-left iframe { 
 		right: 0px;
 		position: absolute; }
+	section#activities hr { 
+		position: relative;
+		width: 110px; }
+	section#activities .left-side hr { 
+		float: right;
+		right: -10px }
+	section#activities .right-side hr { 
+		float: left;
+		left: -10px }
 
-	section#donation p.before { text-align: center }
-	section#donation hr { width: 400px; }
+	section#donation p { 
+		margin-top: 20px;
+		text-align: center }
+	section#donation p.before { 
+		margin-top: inherit; }
+	section#donation hr { width: 410px; border-color: white; }
+	section#donation .table-row div { width: 400px; padding:0px 40px 0px 40px; }
+	section#donation h6 { text-align: center; }
 
 	section#venue h6 { 
 		margin-top: 35px;
@@ -209,9 +232,20 @@ table {
 	section#venue p, section#venue strong {
 		display: block;
 		text-align: center; }
-	section#venue ul li { text-align: center; }
+	section#venue strong.h7 { margin: 20px 0px; }
+	section#venue ul li { 
+		line-height: 1.3em;
+		text-align: center; 
+		font-family: "Open Sans"; }
 
-	footer#contact hr { width: 400px; }
+	footer#contact hr { 
+		width: 400px; 
+		border-color: white; }
+	footer address { 
+		line-height: 1.3em;
+		font-family: "Open Sans"; }
+	footer i { font-size: 3em; }
+	footer div.table-row div { padding: 0px 20px; }
 
 </style>
 
@@ -328,6 +362,7 @@ table {
 						<div class="left-side">
 							<h6>dzogčhen?</h6>
 							<hr />
+							<span class="clear"></span>
 							<p>
 			Slovo "dzogčhen" se dá z tibetštiny přeložit jako "velká dokonalost". Jeho význam odkazuje k pravé přirozenosti všech bytostí, která je od počátku svobodná a nezávislá na všech omezeních a podmíněnostech. Tuto svoji nepodmíněnou přirozenost však většina bytostí nerozpoznává. Učení dzogčhenu a spolupráce s mistrem dzogčhenu je způsobem, jak tuto přirozenost rozpoznat a aktualizovat ji ve svém každodením životě. 
 							</p>
@@ -339,6 +374,7 @@ table {
 						<div class="right-side">
 							<h6>jantrajóga?</h6>
 							<hr />
+							<span class="clear"></span>
 							<p>
 			Jantrajóga je důležitá metoda, která pomáhá sladit tělo, energii a mysl a zároveň nás uvádí do rovnováhy a zbavuje napětí. Skrze pozice, pohyby a jejich kombinaci s dechem a rytmem, koordinujeme a harmonizujeme svou energii. Tak může mysl dosáhnout stavu relaxace a původní rovnováhy, které jsou zásadní pro dosažení stavu kontemplace. Je tedy nesmírně cenným nástrojem nejen pro adepty jógy, ale pro všechny lidské bytosti. 
 							</p>
@@ -348,6 +384,7 @@ table {
 						<div class="left-side">
 							<h6>Tanec vadžry?</h6>
 							<hr />
+							<span class="clear"></span>
 							<p>
 			Tanec vadžry je prostředek k harmonizaci energie každého jednotlivce. Jestliže někdo hlouběji porozumí významu Tance, pak se pro něj Tanec stává metodou pro integraci tří existencí těla, řeči a mysli do poznání stavu kontemplace. Tato integrace je jedním z nejdůležitějších cílů praktikujícího učení dzogčhenu. Tanec se praktikuje na mandale, která reprezentuje soulad mezi vnitřní dimenzí jedince a vnější dimenzí světa. 
 							</p>
@@ -359,6 +396,7 @@ table {
 						<div class="right-side">
 							<h6>radostné tance Khaita?</h6>
 							<hr />
+							<span class="clear"></span>
 							<p>
 			Krátký výklad slova „khaita” je „harmonie v prostoru”. „Kha" znamená prostor nebo nebe. „Ta" označuje harmonii nebo melodii. 
 							</p>
@@ -369,28 +407,38 @@ table {
 		</section>
 		<section id="donation" class="red">
 			<div class="center">
-				<h4>PODPOŘTE AKCI!</h4>
+				<h4>Podpořte akci!</h4>
 				<hr />
 				<h5>Pomozte uskutečnit tuto jedinečnou událost!</h5>
 				<p class="before">Zatím jste darovali: 656 905 Kč (65,9%) z potřebných: 1 000 000 Kč. Děkujeme!</p>
 				<div class="table">
 					<div class="table-row">
 						<div>
-							Financování na principu štědrosti
+							<h6>Způsob financování akce</h6>
+								<p>
 		Jsme inspirováni vznešeným záměrem našeho Mistra zorganizovat učení podle principu štědrosti. Nebudeme tedy vybírat klasické vstupné a učení tak bude dostupné pro všechny zájemce bez rozdílu! 
-
+								</p>
+								<p>
 		Aby toho bylo možné dosáhnout, jsou vřele vítány příspěvky od každého, kdo si přeje podpořit realizaci této jedinečné události v naší zemi. Výše příspěvku by měla vycházet z přání dárce, jeho možností a jeho pochopení hodnoty předávaného učení. Zásluhy plynoucí z takového daru jsou mimo veškerá omezení! 
-
+								</p>
+								<p>
 		Pevně věříme, že náklady na celou akci budou pokryty skrze štědrost účastníků a sponzorů, které aktuálně hledáme!
+								</p>
 						</div>
 						<div>
-							Jak můžu přispět už nyní?
+							<h6>Jak můžu přispět už nyní?</h6>
+								<p>
 		Neváhejte a pošlete váš dar přes PayPal nebo kreditní kartu pomocí tohoto darovacího tlačítka:
+								</p>
 
+								<p>
 		PayPal – The safer, easier way to pay online. 
 		Váš dar můžete rovněž poukázat na účet pořadatele akce, Mezinárodní komunity dzogčhenu v České Republice, č. účtu 2400378087 / 2010, VS 108108. Do zprávy pro příjemce uveďte „DAR CHNN" a vaše jméno. 
 
+								</p>
+								<p>
 		Pokud máte záměr akci finančně podpořit a chcete podrobnosti projednat osobně, neváhejte kontaktovat zástupkyni týmu pro fundraising Mirku Šiškovou na donation@dzogchen.cz
+								</p>
 						</div>
 					</div>
 				</div>
@@ -411,7 +459,15 @@ areál Výstaviště Praha Holešovice, 170 00, Praha 7. </p>
 				<hr />
 				<h6>Možnosti levného ubytování</h6>
 				<p>Pokud chcete za ubytování spíše ušetřit, můžete využít následující možnosti:</p>
-				<strong>Levné hostely</strong>
+				<strong class="h7">Levné hostely</strong>
+				<ul>
+					<li> Budget apartment, Kubelikova 40, Praha </li>
+					<li> Cown and Bard hostel, Bořivojova 102/758, Praha 3, tel. +420 222 716 45 </li>
+					<li> Hostel a ubytovna Liben, areál Meteor Praha, tel. +420 776 646 33 </li>
+					<li> Hostel Alia, ul. Vladimirova, Praha 4 Nusle, tel.+420 723 702 42 </li>
+					<li> Hostel Cortina, Arbesovo namesti, Praha 5 Smichov, tel. +420 776 336 03 </li>
+				</ul>
+				<strong class="h7">Pražské kempy</strong>
 				<ul>
 					<li> Budget apartment, Kubelikova 40, Praha </li>
 					<li> Cown and Bard hostel, Bořivojova 102/758, Praha 3, tel. +420 222 716 45 </li>
@@ -421,9 +477,11 @@ areál Výstaviště Praha Holešovice, 170 00, Praha 7. </p>
 				</ul>
 			</div>
 		</section>
+<!--
 		<section id="registrace">
 			<iframe src="https://docs.google.com/forms/d/1ARw0RrqICmpBYJTww1Sb1kiyOtVikMhdMKDVYt9Rurc/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 		</section>
+-->
 		<footer id="contact" class="red">
 			<div class="center">
 				<h4>Kontakt</h4>
@@ -432,6 +490,7 @@ areál Výstaviště Praha Holešovice, 170 00, Praha 7. </p>
 					<div class="table-row">
 						<div>
 							<h6>E-mail</h6>
+							<i class="glyphicon glyphicon-envelope"></i>
 						</div>
 						<div>
 							<h6>Informace</h6>
@@ -439,13 +498,16 @@ areál Výstaviště Praha Holešovice, 170 00, Praha 7. </p>
 						</div>
 						<div>
 							<h6>Pořadatel</h6>
-							<address>Mezinárodní komunita dzogčhenu Kunkyabling, z.s. 
-Opletalova 35
-11000 Praha 1
-IČ 26518562</address>
+							<address>
+								Mezinárodní komunita dzogčhenu Kunkyabling, z.s. 
+								Opletalova 35
+								11000 Praha 1
+								IČ 26518562
+							</address>
 						</div>
 						<div>
 							<h6>Sledujete nás</h6>
+							<img src="/img/FB-f-Logo__blue_58.png" />
 						</div>
 					</div>
 				</div>
@@ -453,5 +515,4 @@ IČ 26518562</address>
 		</footer>
 	</main>
 </body>
-
 </html>
