@@ -52,10 +52,20 @@ table {
 	border-spacing: 0;
 }
 
+	html, body { 
+		width: 100%;
+		height: 100%; }
+
 	strong {font-weight: bold;}
 
 	h4, h5, h6 { font-family: "Libre Baskerville"; }
 	header {
+		background-image: url("/img/background.png");
+		background-position: center 66px;
+		background-size: cover;
+		position: relative;
+		height: 100%;
+		width: 100%;
 		font-family: 'Open Sans';
 		background-color: #840c20; }
 	header nav {
@@ -74,11 +84,39 @@ table {
 		margin-top: 7px;
 		margin-left: 127px;
 		float: left; }
-	header nav div#rinpoche img {
-		height: auto;
+	header div#rinpoche-picture {
+		top: 0px;
+		left: 0px;
+		position: absolute;
+		padding-top: 132px;
+		height: 100%;
 		width: 100%; }
-	div#rinpoche { position: relative; }
+	header div#rinpoche-picture div {
+		height: 100%;
+		width: 100%;
+		background-image: url("/img/rinpoche_transparent.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: left 0px; }
+
+	#header-text-1, #header-text-2 { 
+		font-family: "Libre Baskerville";
+		color: white; }
+	#header-text-1 {
+		width: 50%;
+		margin-left: 45%;
+		text-align: center;
+		margin-top: 100px; }
+	#header-text-1 h1 { font-size: 3em; }
+	#header-text-1 h3 { 
+		text-transform: uppercase;
+		font-size: 1.5em; }
+
+	div#header h2 { font-size: 40px; }
+	div#header h3 { font-size: 30px; }
+
 	div#header { 
+		background-image: url("/img/background.png");
 		font-family: "Libre Baskerville";
 		position: absolute;
 		top: 20%;
@@ -86,9 +124,6 @@ table {
 		width: 50%;
 		text-align: center;
 		color: white; }
-	div#header h1 { font-size: 50px; }
-	div#header h2 { font-size: 40px; }
-	div#header h3 { font-size: 30px; }
 	div#header hr { width: 100px; }
 	div.clear, span.clear { 
 		display: block;
@@ -123,8 +158,9 @@ table {
 	main section {
 		width: 100%; }
 	main section div.center, footer div.center {
+		padding: 0px 20px;
 		position: relative;
-		width: 1000px;
+		max-width: 1000px;
 		margin: 0px auto; }
 	div.float {
 		width: 1000px; 
@@ -135,18 +171,21 @@ table {
 		color: white;
 		background-color: #840c20; }
 	
-	.table-row {
-		position: relative;
-		right: 50px;
-		display: table-row }
-	.table-row div {
-		width: 300px;
-		vertical-align: top;
-		display: table-cell }
+	@media (min-width: 780px) {
+		.table-row {
+			position: relative;
+			right: 50px;
+			display: table-row }
+		.table-row div {
+			width: 300px;
+			vertical-align: top;
+			display: table-cell }
+		.table {
+			display: table; } }
+
 	.table {
-		margin: 50px auto 0px auto;
-		margin-top: 50px;
-		display: table; }
+		margin: 50px auto 0px auto; }
+
 	section .table .table-row h6 { margin: 0px 0px 15px 0px; }
 	section .table .table-row h6.non-first { margin: 40px 0px 15px 0px; }
 
@@ -165,16 +204,22 @@ table {
 		font-style: italic;
 		margin: 0px auto;
 		text-align: center;
-		width: 800px; }
+		max-width: 800px; }
 	section#teacher p.q em {
 		margin-top: 20px;
 		text-align: center;
 		display: block; }
 	section#teacher div.text { 
-		width: 350px; }
+		min-width: 220px ;
+		max-width: 350px; }
+	@media (max-width:780px) {
+		section#teacher .table-row div { 
+			margin-bottom: 20px;
+			float: left; } }
 	section#teacher h6 {
 		margin-top: 15px; }
 	section#teacher div.table-row img {
+		padding: 0px 20px;
 		display: block;
 		margin: 0px auto }
 
@@ -262,19 +307,22 @@ table {
 				<a href="#">Kontakt</a>
 			</div>
 		</nav>
-		<div class="clear"></div>
 		<div class="stripe"></div>
-		<div id="rinpoche">
-			<img src="/img/rinpoche.png" />
-			<div id="header">
-				<h1>Příme uvedení<br/> do stavu poznání</h1>
-				<h3>Chogjal namkhai norbu</h3>
-				<hr />
-				<h2>12. - 14. 8. 2016</h2>
-				<h3>Prmůmyslový palác, Praha</h3>
-				<p>Nejvýznamnější současný mistr dzogčhenu Čhögjal Namkhai Norbu<br/> předá v Praze přímé uvedení do přirozenosti mysli<br/> a vzácné učení dzogčhenu. </p>
-			</div>
+		<div id="rinpoche-picture">
+			<div></div>
 		</div>
+		<div id="header-text-1">
+			<h1>Příme uvedení<br/> do stavu poznání</h1>
+			<h3>Chogjal namkhai norbu</h3>
+		</div>
+<!--
+		<div id="header-text-2">
+			<hr />
+			<h2>12. - 14. 8. 2016</h2>
+			<h3>Prmůmyslový palác, Praha</h3>
+			<p>Nejvýznamnější současný mistr dzogčhenu Čhögjal Namkhai Norbu<br/> předá v Praze přímé uvedení do přirozenosti mysli<br/> a vzácné učení dzogčhenu.</p>
+		</div>
+-->
 	</header>
 	<main>
 		<section id="teacher" class="gray">
@@ -304,6 +352,7 @@ table {
 								Poselstvím, které Mistr posledních 50 let odevzdává je, že je možné žít harmonicky i uprostřed chaotického každodenního shonu dnešních dnů. Je možné žít životem, který je uvolněný, pokojný a prostoupený vzájemnou spoluprací.
 							</p>
 						</div>
+						<span class="clear"></span>
 					</div>
 				</div>
 			</div>
@@ -475,11 +524,6 @@ areál Výstaviště Praha Holešovice, 170 00, Praha 7. </p>
 				</ul>
 			</div>
 		</section>
-<!--
-		<section id="registrace">
-			<iframe src="https://docs.google.com/forms/d/1ARw0RrqICmpBYJTww1Sb1kiyOtVikMhdMKDVYt9Rurc/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-		</section>
--->
 		<footer id="contact" class="red">
 			<div class="center">
 				<h4>Kontakt</h4>
