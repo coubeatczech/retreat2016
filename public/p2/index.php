@@ -126,7 +126,7 @@ table {
 		text-align: center;
 		font-family: 'Libre Baskerville';
 		color: white; }
-	#header-text-1 { margin-top: 100px; }
+	#header-text-1 { margin-top: 13%; }
 	#header-text-2 hr {
 		width: 100px; }
 
@@ -140,7 +140,7 @@ table {
 	h2 { font-size: 2em; }
 
 	/* above the fold */
-	@media (max-width: 1170px) {
+	@media (max-width: 1170px) , (max-height:600px) {
 		#header-text-1, #header-text-2 {
 			margin-left: 0px;
 			width: 100%; }
@@ -318,6 +318,7 @@ table {
 	section#activities .table-row div { padding-bottom: 55px; }
 	section#activities .table-row div h6 { margin: 50px 0px 0px 0px; }
 	section#activities .table-row p { margin-top: 15px; }
+	section#activities .video { height: 250px; }
 	section#activities .video-left { 
 		left: -50%;
 		position: relative; }
@@ -336,6 +337,23 @@ table {
 	section#activities .right-side hr { 
 		float: left;
 		left: -10px }
+	@media (min-width: 600px) {
+		#activities .table-row {
+			position: relative;
+			right: 50px;
+			display: table-row }
+		#activities .table-row div {
+			width: 300px;
+			vertical-align: top;
+			display: table-cell }
+		#activities .table {
+			display: table; } }
+	@media (max-width: 600px) {
+		section#activities .table-row div { padding-bottom: 20px; }
+		section#activities hr { display: none; }
+		section#activities h6 { text-align: center; }
+		section#activities p { text-align: left; }
+		section#activities .right-side { position: static; } }
 
 	section#donation p { 
 		margin-top: 20px;
@@ -544,7 +562,7 @@ table {
 			Slovo "dzogčhen" se dá z tibetštiny přeložit jako "velká dokonalost". Jeho význam odkazuje k pravé přirozenosti všech bytostí, která je od počátku svobodná a nezávislá na všech omezeních a podmíněnostech. Tuto svoji nepodmíněnou přirozenost však většina bytostí nerozpoznává. Učení dzogčhenu a spolupráce s mistrem dzogčhenu je způsobem, jak tuto přirozenost rozpoznat a aktualizovat ji ve svém každodením životě. 
 							</p>
 						</div>
-						<div><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
+						<div class="video"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
 						<div class="right-side">
@@ -555,7 +573,7 @@ table {
 			Jantrajóga je důležitá metoda, která pomáhá sladit tělo, energii a mysl a zároveň nás uvádí do rovnováhy a zbavuje napětí. Skrze pozice, pohyby a jejich kombinaci s dechem a rytmem, koordinujeme a harmonizujeme svou energii. Tak může mysl dosáhnout stavu relaxace a původní rovnováhy, které jsou zásadní pro dosažení stavu kontemplace. Je tedy nesmírně cenným nástrojem nejen pro adepty jógy, ale pro všechny lidské bytosti. 
 							</p>
 						</div>
-						<div class="video-left"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
+						<div class="video video-left"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
 						<div class="left-side">
@@ -566,7 +584,7 @@ table {
 			Tanec vadžry je prostředek k harmonizaci energie každého jednotlivce. Jestliže někdo hlouběji porozumí významu Tance, pak se pro něj Tanec stává metodou pro integraci tří existencí těla, řeči a mysli do poznání stavu kontemplace. Tato integrace je jedním z nejdůležitějších cílů praktikujícího učení dzogčhenu. Tanec se praktikuje na mandale, která reprezentuje soulad mezi vnitřní dimenzí jedince a vnější dimenzí světa. 
 							</p>
 						</div>
-						<div><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
+						<div class="video"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
 						<div class="right-side">
@@ -577,7 +595,7 @@ table {
 			Krátký výklad slova „khaita” je „harmonie v prostoru”. „Kha" znamená prostor nebo nebe. „Ta" označuje harmonii nebo melodii. 
 							</p>
 						</div>
-						<div class="video-left"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
+						<div class="video video-left"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 				</div>
 			</div>
