@@ -259,6 +259,8 @@ table {
 	section .table .table-row h6.non-first { margin: 40px 0px 15px 0px; }
 
 	img.mkcenter { 
+		max-width: 100%;
+		height: auto;
 		display: block;
 		margin: 0px auto; }
 
@@ -266,7 +268,7 @@ table {
 		font-family: 'Open Sans';
 		line-height: 1.3em; }
 	
-	section#teacher hr { width: 400px; }
+	section#teacher hr { max-width: 400px; }
 	section#teacher p.q {
 		font-family: 'Libre Baskerville';
 		font-size: 1.3em;
@@ -295,24 +297,33 @@ table {
 	section#programme hr { width: 200px; }
 	section#programme p.standalone { 
 		margin: 0px auto;
-		width: 900px; }
+		max-width: 900px; }
 	section#programme p.after-programme { margin-top: 35px; }
 	section#programme p { text-align: center; }
 	section#programme hr.after-programme { 
-		width: 400px;
+		max-width: 400px;
 		margin: 20px auto; }
 	section#programme ul li {
 		font-family: 'Open Sans'; }
+	@media (max-width:780px) {
+		section#programme .table-row div h6 {
+			margin-top: 40px; } }
 
 	section#activities .right-side {
 		padding-left: 10px; }
 	section#activities .left-side { 
 		padding-right: 10px;
 		text-align: right; }
+	section#activities .table-row { position: relative; } 
 	section#activities .table-row div { padding-bottom: 55px; }
 	section#activities .table-row div h6 { margin: 50px 0px 0px 0px; }
 	section#activities .table-row p { margin-top: 15px; }
-	section#activities .video-left { position: relative; }
+	section#activities .video-left { 
+		left: -50%;
+		position: relative; }
+	section#activities .right-side { 
+		right: -50%;
+		position: relative; }
 	section#activities .video-left iframe { 
 		right: 0px;
 		position: absolute; }
@@ -331,9 +342,16 @@ table {
 		text-align: center }
 	section#donation p.before { 
 		margin-top: inherit; }
-	section#donation hr { width: 410px; border-color: white; }
-	section#donation .table-row div { width: 400px; padding:0px 40px 0px 40px; }
+	section#donation hr { max-width: 400px; border-color: white; }
+	section#donation .table-row div { 
+		max-width: 400px; 
+		padding:0px 40px; }
 	section#donation h6 { text-align: center; }
+	@media (max-width:780px) {
+		section#donation .table-row div { 
+			padding: 0px; }
+		section#donation .table-row div h6 {
+			margin-top: 40px; } }
 
 	section#venue h6 { 
 		margin-top: 35px;
@@ -353,7 +371,7 @@ table {
 		font-family: "Open Sans"; }
 
 	footer#contact hr { 
-		width: 400px; 
+		max-width: 400px; 
 		border-color: white; }
 	footer address { 
 		line-height: 1.3em;
@@ -361,6 +379,7 @@ table {
 	footer i { font-size: 3em; }
 	footer div.table-row div { padding: 0px 20px; }
 	footer form input {
+		max-width: 300px;
 		font-family: "Open Sans";
 		padding-left: 20px;
 		color: black;
@@ -378,6 +397,11 @@ table {
 	footer form input[type="submit"] {
 		padding-left: 0px;
 		text-align: center; }
+	@media (max-width: 780px) {
+		footer#contact .table .table-row div h6 {
+			margin-top: 40px; }
+		footer#contact .table .table-row div {
+			padding: 0px; }
 
 </style>
 
@@ -523,7 +547,6 @@ table {
 						<div><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
-						<div class="video-left"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 						<div class="right-side">
 							<h6>jantrajóga?</h6>
 							<hr />
@@ -532,6 +555,7 @@ table {
 			Jantrajóga je důležitá metoda, která pomáhá sladit tělo, energii a mysl a zároveň nás uvádí do rovnováhy a zbavuje napětí. Skrze pozice, pohyby a jejich kombinaci s dechem a rytmem, koordinujeme a harmonizujeme svou energii. Tak může mysl dosáhnout stavu relaxace a původní rovnováhy, které jsou zásadní pro dosažení stavu kontemplace. Je tedy nesmírně cenným nástrojem nejen pro adepty jógy, ale pro všechny lidské bytosti. 
 							</p>
 						</div>
+						<div class="video-left"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
 						<div class="left-side">
@@ -545,7 +569,6 @@ table {
 						<div><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
-						<div class="video-left"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 						<div class="right-side">
 							<h6>radostné tance Khaita?</h6>
 							<hr />
@@ -554,6 +577,7 @@ table {
 			Krátký výklad slova „khaita” je „harmonie v prostoru”. „Kha" znamená prostor nebo nebe. „Ta" označuje harmonii nebo melodii. 
 							</p>
 						</div>
+						<div class="video-left"><iframe width="250" height="250" src="https://www.youtube.com/embed/DaJwuhs0ZPM" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 				</div>
 			</div>
@@ -602,7 +626,9 @@ table {
 				<h4>Místo a ubytování</h4>
 				<hr />
 				<h5>Učení dzogčhenu v Praze</h5>
-				<img src="/img/foto_palac.jpg" class="mkcenter" />
+				<div class="responsive-image">
+					<img src="/img/foto_palac.jpg" class="mkcenter" />
+				</div>
 				<h6>Místo konání</h6>
 				<p>Akce proběhne v reprezentativní budově Průmyslového paláce,
 areál Výstaviště Praha Holešovice, 170 00, Praha 7. </p>
