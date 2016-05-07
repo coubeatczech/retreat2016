@@ -4,6 +4,7 @@
 
 <meta charset="utf-8" />
 
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Open+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -52,29 +53,43 @@ table {
 	border-spacing: 0;
 }
 
+	main, header, footer { min-width: 300px; }
+
 	html, body { 
 		width: 100%;
 		height: 100%; }
 
 	strong {font-weight: bold;}
 
+	.shown { display: block; }
+	a:hover, a:visited, a:focus { 
+		color: inherit; }
+
 	h4, h5, h6 { font-family: "Libre Baskerville"; }
 	header {
 		background-image: url("/img/background.png");
 		background-position: center 66px;
 		background-size: cover;
+		background-repeat: no-repeat;
 		position: relative;
 		height: 100%;
 		width: 100%;
 		font-family: 'Open Sans';
 		background-color: #840c20; }
 	header nav {
+		z-index: 9999;
 		color: white;
 		height: 66px; }
-	header nav div.menu {
+	header nav div.hamburger {
+		display: none; }
+	header nav div.menu, header nav div.hamburger {
+		position: relative;
 		margin-top: 25px;
 		float: right;
-		margin-right: 132px; }
+		margin-right: 25px; }
+	header nav div.hamburger i {
+		top: 2px;
+		position: relative; }
 	header nav div a { 
 		font-family: "Open Sans";
 		color: white; 
@@ -82,7 +97,7 @@ table {
 		text-decoration: none; }
 	header nav a#header-logo {
 		margin-top: 7px;
-		margin-left: 127px;
+		margin-left: 7px;
 		float: left; }
 	header div#rinpoche-picture {
 		top: 0px;
@@ -98,22 +113,76 @@ table {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: left 0px; }
+	header div#header-text-2 h3 {
+		margin: 10px 0px; }
+	header div#header-text-2 h2 {
+		margin: 15px 0px; }
+	header div#header-text-2 p {
+		margin-top: 40px; }
 
 	#header-text-1, #header-text-2 { 
-		font-family: "Libre Baskerville";
-		color: white; }
-	#header-text-1 {
 		width: 50%;
 		margin-left: 45%;
 		text-align: center;
-		margin-top: 100px; }
-	#header-text-1 h1 { font-size: 3em; }
-	#header-text-1 h3 { 
+		font-family: 'Libre Baskerville';
+		color: white; }
+	#header-text-1 { margin-top: 100px; }
+	#header-text-2 hr {
+		width: 100px; }
+
+	h1 { 
+		text-transform: uppercase;
+		font-size: 3em; }
+	h3 { 
 		text-transform: uppercase;
 		font-size: 1.5em; }
 
-	div#header h2 { font-size: 40px; }
-	div#header h3 { font-size: 30px; }
+	h2 { font-size: 2em; }
+
+	/* above the fold */
+	@media (max-width: 1170px) {
+		#header-text-1, #header-text-2 {
+			margin-left: 0px;
+			width: 100%; }
+		#header-text-1, #header-text-2 { padding: 40px 0px; }
+		#header-text-1 { margin-top: 0px; }
+		header {
+			height: auto;
+			background-image: none; }
+		header div#header-part-1 {
+			background-size: cover;
+			background-image: url("/img/background.png"); }
+		header div#rinpoche-picture {
+			padding-top: 0px;
+			width: 100%;
+			position: static; }
+		header div#rinpoche-picture div {
+			width: 100%;
+			height: 0px;
+			padding-bottom: 76%; } }
+
+	/* menu */
+	@media (max-width: 1012px) {
+		header nav div.hamburger {
+			display: block; }
+		header nav div.menu.shown {
+			display: block; }
+		header nav { 
+			position: relative; }
+		header nav div.menu span {
+			display: none; }
+		header nav div.menu a {
+			text-align: right;
+			margin-bottom: 30px;
+			color: black;
+			display: block; }
+		header nav div.menu {
+			padding: 30px 30px 0px 30px;
+			background-color: #fcf1c9;
+			right: 0px;
+			top: 40px;
+			position: absolute;
+			display: none; } }
 
 	div#header { 
 		background-image: url("/img/background.png");
@@ -275,7 +344,9 @@ table {
 	section#venue p, section#venue strong {
 		display: block;
 		text-align: center; }
-	section#venue strong.h7 { margin: 20px 0px; }
+	section#venue strong.h7 { 
+		font-family: "Open Sans";
+		margin: 20px 0px; }
 	section#venue ul li { 
 		line-height: 1.3em;
 		text-align: center; 
@@ -289,8 +360,32 @@ table {
 		font-family: "Open Sans"; }
 	footer i { font-size: 3em; }
 	footer div.table-row div { padding: 0px 20px; }
+	footer form input {
+		font-family: "Open Sans";
+		padding-left: 20px;
+		color: black;
+		border-radius: 300px;
+		font-weight: bold;
+		height: 40px;
+		font-size: 1.2em;
+		line-height: 1.2em;
+		text-transform: uppercase;
+		font-family: "Open Sans";
+		margin-top: 20px;
+		display: block;
+		text-align: left;
+		width: 100%; }
+	footer form input[type="submit"] {
+		padding-left: 0px;
+		text-align: center; }
 
 </style>
+
+<script>
+	$(document).ready(function () {
+	$(".hamburger a").click(function(){
+		$("div.menu").toggleClass("shown"); }); });
+</script>
 
 <title></title>
 </head>
@@ -300,29 +395,40 @@ table {
 		<nav>
 			<a id="header-logo" href="#"><img src="/img/idc_logo.png" /></a>
 			<div class="menu">
-				<a href="#">Učitel</a> |
-				<a href="#">Program</a> |
-				<a href="#">Podpořte akci</a> |
-				<a href="#">Místo a ubytování</a> |
+				<a href="#">Učitel</a> 
+				<span>|</span>
+				<a href="#">Program</a>
+				<span>|</span>
+				<a href="#">Podpořte akci</a>
+				<span>|</span>
+				<a href="#">Místo a ubytování</a>
+				<span>|</span>
 				<a href="#">Kontakt</a>
+				<span>|</span>
+				<a href="#">Stránky komunity</a>
+				<span>|</span>
+				<a href="#">En</a>
+			</div>
+			<div class="hamburger">
+				<a href="javascript://">Menu <i class="glyphicon glyphicon-menu-hamburger"></i></a>
 			</div>
 		</nav>
 		<div class="stripe"></div>
-		<div id="rinpoche-picture">
-			<div></div>
+		<div id="header-part-1">
+			<div id="header-text-1">
+				<h1>Příme uvedení<br/> do stavu poznání</h1>
+			</div>
+			<div id="rinpoche-picture">
+				<div></div>
+			</div>
 		</div>
-		<div id="header-text-1">
-			<h1>Příme uvedení<br/> do stavu poznání</h1>
-			<h3>Chogjal namkhai norbu</h3>
-		</div>
-<!--
 		<div id="header-text-2">
+			<h3>Chogjal namkhai norbu</h3>
 			<hr />
 			<h2>12. - 14. 8. 2016</h2>
 			<h3>Prmůmyslový palác, Praha</h3>
 			<p>Nejvýznamnější současný mistr dzogčhenu Čhögjal Namkhai Norbu<br/> předá v Praze přímé uvedení do přirozenosti mysli<br/> a vzácné učení dzogčhenu.</p>
 		</div>
--->
 	</header>
 	<main>
 		<section id="teacher" class="gray">
@@ -537,19 +643,24 @@ areál Výstaviště Praha Holešovice, 170 00, Praha 7. </p>
 						<div>
 							<h6>Informace</h6>
 							<p>Nechcete, aby vám unikly změny v programu? Odebírejte aktuální informace o retreatu!</p>
+							<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="form-inline subscribe">
+								<input type="hidden" name="campaign_token" value="xxx" class="form-control" />
+								<input type="text" name="email" placeholder="Váš e-mail"/>
+								<input type="submit" value="Odeslat"/>
+							</form>
 						</div>
 						<div>
 							<h6>Pořadatel</h6>
 							<address>
-								Mezinárodní komunita dzogčhenu Kunkyabling, z.s. 
-								Opletalova 35
-								11000 Praha 1
+								Mezinárodní komunita dzogčhenu Kunkyabling, z.s. <br/>
+								Opletalova 35 <br/>
+								11000 Praha 1 <br/>
 								IČ 26518562
 							</address>
 						</div>
 						<div>
 							<h6>Sledujete nás</h6>
-							<img src="/img/FB-f-Logo__blue_58.png" />
+							<img src="/img/FB-f-Logo__blue_50.png" />
 						</div>
 					</div>
 				</div>
