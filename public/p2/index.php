@@ -1,3 +1,42 @@
+<?php
+
+	include "/var/www/retreat2016/database.php";
+
+	function redirect($url, $permanent = false) {
+    header('Location: ' . "http://" . $_SERVER['HTTP_HOST'] . $url, true, $permanent ? 301 : 302);
+    exit(); }
+
+	if (! isset($_GET["lang"])) {
+		$user_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+		switch ($user_lang){
+			case "cs":
+				redirect('/retreat/cs/', false);
+			default:
+				redirect('/retreat/en/', false);
+				break; } }
+
+	$lang = $_GET["lang"];
+	if ($lang != "en" && $lang != "cs") {
+		die; }
+
+	$mysqli = new mysqli("localhost", $db_user, $db_pass, $db_database);
+	$mysqli->set_charset("utf8");
+	if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error; }
+	$result = $mysqli->query("select meta_key, meta_value from wp_postmeta where post_id = " . $copy_post_id . " and meta_key like '" . $lang . "_%'");
+
+	$results_array = array();
+	while ($row = $result->fetch_assoc()) {
+		$results_array[substr($row["meta_key"],3)] = $row["meta_value"]; }
+
+	function i($key) {
+		global $results_array;
+		echo $results_array[$key]; }
+
+	i("menu_teacher"); 
+	die;
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
