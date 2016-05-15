@@ -41,7 +41,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 <style>
@@ -122,7 +122,7 @@ table {
 		background-repeat: repeat-x; 
 		top: 66px;
 		left: 0px;
-		z-index: 1;
+		z-index: 1000;
 		width: 100%;
 		height: 16px;
 		position: fixed; }
@@ -178,17 +178,20 @@ table {
 	#header-text-1, #header-text-2 { 
 		padding: 0px 20px;
 		width: 50%;
-		margin-left: 45%;
+		margin-left: 40%;
 		text-align: center;
 		font-family: 'Libre Baskerville';
 		color: white; }
-	#header-text-1 { padding-top: 10%; }
+	#header-text-1 { 
+		width: 70%;
+		margin-left: 30%;
+		padding: 8% 0px 0px 0px; }
 	#header-text-2 hr {
 		width: 100px; }
 
 	h1 { 
 		text-transform: uppercase;
-		font-size: 3em; }
+		font-size: 2.5em; }
 	h3 { 
 		text-transform: uppercase;
 		font-size: 1.5em; }
@@ -196,7 +199,23 @@ table {
 	h2 { font-size: 2em; }
 
 	/* above the fold */
-	@media (max-width: 1170px), (max-height:600px) {
+	@media (min-width: 1000px) and (max-width: 1305px) {
+		header div#rinpoche-picture div { 
+			background-position: -150px 0px; } }
+	@media (max-width: 500px) {
+		h1 { font-size: 1.8em; } }
+
+	@media (max-width: 999px), (max-height: 600px) {
+		#header-text-1 { padding-top: 35px; }
+		#header-text-1, #header-text-2 {
+			margin-left: 35%;
+		  width: 60%; }
+		header div#rinpoche-picture {
+			padding-top: 300px; }
+		header div#rinpoche-picture div {
+			background-position: -100px 0px; } }
+
+	@media (max-width: 767px), (max-height:600px) {
 		header { height: auto; }
 		header div#background1, header div#background2 { height: auto; }
 		#header-text-1, #header-text-2 {
@@ -209,9 +228,12 @@ table {
 			width: 100%;
 			position: static; }
 		header div#rinpoche-picture div {
+			background-position: left 0px;
 			width: 100%;
 			height: 0px;
 			padding-bottom: 76%; } }
+	@media (max-width: 400px) {
+		 header .mobile { display: none; } }
 
 	/* menu */
 	@media (max-width: 1012px) {
@@ -232,7 +254,7 @@ table {
 			background-color: #fcf1c9;
 			right: 0px;
 			top: 40px;
-			position: fixed;
+			position: absolute;
 			display: none; } }
 
 	div.clear, span.clear { 
@@ -243,9 +265,12 @@ table {
 	h4 {
 		font-size: 2em;
 		font-weight: 600; }
-	h5 {
+	h5, .h8 {
 		margin-top: 15px;
-		margin-bottom: 40px;}
+		margin-bottom: 40px; }
+	.h8 { 
+		display: block;
+		text-align: center; }
 	h4, h5 {
 		text-transform: uppercase;
 		text-align: center; }
@@ -272,15 +297,13 @@ table {
 		width: 1000px; 
 		position: relative; }
 	.gray {
-		background-color: #fcf1c9; }
+		background-color: #fffee8; }
 	.red {
-		color: white;
+		color: #fffee9;
 		background-color: #840c20; }
 	
 	@media (min-width: 780px) {
 		.table-row {
-			position: relative;
-			right: 50px;
 			display: table-row }
 		.table-row div {
 			width: 300px;
@@ -319,24 +342,32 @@ table {
 		display: block; }
 	section#teacher div.text { 
 		min-width: 220px ;
-		max-width: 350px; }
-	@media (min-width: 700px) and (max-width: 780px) {
-		section#teacher .table-row div { 
-			margin-bottom: 20px;
-			float: left; } }
-	@media (max-width: 700px) {
-		section#teacher .table-row div { 
-			float: none; }
-		section#teacher .table-row div.text { 
-			max-width: 500px;
-			margin: 0px auto;
-			text-align: center; } }
+		max-width: 220px; }
+	section#teacher .table-row div { 
+		width: auto; }
 	section#teacher h6 {
 		margin-top: 15px; }
 	section#teacher div.table-row img {
 		padding: 0px 20px;
 		display: block;
 		margin: 0px auto }
+	@media (max-width: 800px) {
+		section#teacher .table { 
+			display: block; }
+		section#teacher .table-row { 
+			display: block; }
+		section#teacher .table-row div { 
+			display: block;
+			float: left; }
+		section#teacher .table-row div.text.mobile-row { 
+			max-width: 500px; }
+		section#teacher .table-row div.text { 
+			max-width: 300px;
+			margin: 0px auto;
+			text-align: left; } }
+	@media (min-width: 300px) and (max-width: 640px) {
+		section#teacher .table-row div.text { 
+			max-width: 500px; } }
 
 	section#programme hr { width: 200px; }
 	section#programme p.standalone { 
@@ -348,29 +379,35 @@ table {
 		max-width: 400px;
 		margin: 20px auto; }
 	section#programme ul li {
+		line-height: 1.3em;
 		font-family: 'Open Sans'; }
 	section#programme .table-row div h6 {
 		margin-top: 20px; }
+	section#programme .table-row div strong {
+		display: inline-block;
+		margin-top: 10px; }
 	@media (max-width:780px) {
 		section#programme .table-row div h6 {
 			margin-top: 40px; } }
+	@media (max-width: 699px) {
+		section#programme .table-row div {
+			text-align: left; } }
 	@media (min-width: 700px) {
+		section#programme .table {
+			table-layout: fixed; }
 		section#programme .table-row {
-			position: relative;
-			right: 50px;
 			display: table-row; }
 		section#programme .table-row div {
-			width: 300px;
+			padding: 0px 15px;
+			max-width: 300px;
+			width: auto;
 			vertical-align: top;
 			display: table-cell; }
 		section#programme .table {
 			display: table; } } 
-	@media (max-width: 699px) {
-		section#programme .table-row div {
-			text-align: center; } }
 
 	section#activities .right-side {
-		padding-left: 10px; }
+		padding-left: 50px; }
 	section#activities .left-side { 
 		padding-right: 10px;
 		text-align: right; }
@@ -378,37 +415,47 @@ table {
 	section#activities .table-row div { padding-bottom: 55px; }
 	section#activities .table-row div h6 { margin: 50px 0px 0px 0px; }
 	section#activities .table-row p { margin-top: 15px; }
-	section#activities .video { height: 250px; }
 	section#activities .video-left { 
 		left: -50%;
 		position: relative; }
 	section#activities .right-side { 
 		right: -50%;
 		position: relative; }
-	section#activities .video-left iframe { 
-		right: 0px;
-		position: absolute; }
 	section#activities hr { 
 		position: relative;
-		width: 110px; }
+		width: 140px; }
 	section#activities .left-side hr { 
 		float: right;
-		right: -10px }
+		right: -50px }
 	section#activities .right-side hr { 
 		float: left;
-		left: -10px; }
-	@media (min-width: 600px) {
+		left: -50px; }
+	@media (min-width: 940px) {
+		section#activities .video-left iframe { 
+			right: 0px;
+			position: absolute; }
 		section#activities .table-row {
-			position: relative;
-			right: 50px;
 			display: table-row; }
+		section#activities .table-row .left-side {
+			padding-right: 50px; }
 		section#activities .table-row div {
-			width: 300px;
+			width: 400px;
 			vertical-align: top;
 			display: table-cell; }
 		section#activities .table {
+			table-layout: fixed;
 			display: table; } }
-	@media (max-width: 599px) {
+	@media (max-width: 939px) {
+		section#activities .table-row {
+			display: block }
+		section#activities .table-row div {
+			max-width: 500px;
+			width: auto;
+			display: block }
+		section#activities .right-side {
+			padding-left: 0px; }
+		section#activities .table {
+			display: block; }
 		section#activities .table-row div { padding-bottom: 20px; }
 		section#activities hr { display: none; }
 		section#activities h6 { text-align: center; }
@@ -416,12 +463,37 @@ table {
 		section#activities .right-side { position: static; }
 		section#activities .video-left { position: static; } }
 
+	section#donation #thermometer {
+		text-align: center;
+		width: 100%; }
+	section#donation #thermometer div {
+		position: relative;
+		margin: 40px auto;
+		max-width: 500px }
+	section#donation #thermometer hr {
+		
+		margin: 0px;
+		max-width: 100%;
+		height: 0px;
+		border-radius: 10px; }
+	section#donation #thermometer hr.whole {
+		display: block;
+		border: 10px solid #dcd9d9;
+		color: black;
+		box-sizing: border-box;
+		width: 100%; }
+	section#donation #thermometer hr.active {
+		left: 0px;
+		top: 0px;
+		width: 33.8%;
+		border: 10px solid #840c20;
+		position: absolute; }
 	section#donation p { 
 		margin-top: 20px;
-		text-align: center }
+		text-align: left; }
 	section#donation p.before { 
 		margin-top: inherit; }
-	section#donation hr { max-width: 400px; border-color: white; }
+	section#donation hr { max-width: 400px; }
 	section#donation .table-row div { 
 		max-width: 400px; 
 		padding:0px 40px; }
@@ -451,6 +523,8 @@ table {
 		line-height: 1.3em;
 		text-align: center; 
 		font-family: "Open Sans"; }
+	section#venue img#pin { 
+		margin: 40px auto; }
 
 	footer#contact hr { 
 		max-width: 400px; 
@@ -461,6 +535,7 @@ table {
 	footer i.glyphicon { font-size: 3em; display: block; }
 	footer div.table-row div { padding: 0px 20px; }
 	footer form input {
+		border: 0px;
 		max-width: 300px;
 		font-family: "Open Sans";
 		padding-left: 20px;
@@ -477,8 +552,11 @@ table {
 		text-align: left;
 		width: 100%; }
 	footer form input[type="submit"] {
+		background-color: #dcd9d9;
 		padding-left: 0px;
 		text-align: center; }
+	footer form input[type="text"] {
+		text-transform: none; }
 	footer .table-row div a { 
 		display: block;
 		margin-top: 20px;
@@ -555,7 +633,10 @@ table {
 					<div class="table-row">
 						<div class="text"> <?php i("teacher_col_2"); ?> </div>
 						<div><img src="/img/rinpoche_small.png" /></div>
-						<div class="text"> <?php i("teacher_col_4"); ?> </div>
+						<span class="clear"></span>
+						<div class="text mobile-row"> 
+							<?php i("teacher_col_4"); ?> 
+						</div>
 						<span class="clear"></span>
 					</div>
 				</div>
@@ -573,11 +654,12 @@ table {
 					<div class="table-row">
 						<div>
 							<?php i("programme_day_1"); ?>
+						</div>
+						<div>
 							<?php i("programme_day_2"); ?>
 						</div>
 						<div>
 							<?php i("programme_day_3"); ?>
-							<?php i("programme_day_4"); ?>
 						</div>
 					</div>
 				</div>
@@ -586,6 +668,7 @@ table {
 				<p> <?php i("programme_slovakia"); ?> </p>
 			</div>
 		</section>
+		<?php if ($lang != "en") { ?>
 		<section class="gray" id="activities">
 			<div class="center">
 				<div class="table">
@@ -596,7 +679,7 @@ table {
 							<span class="clear"></span>
 							<p><?php i("programme_p_dz"); ?></p>
 						</div>
-						<div class="video"><iframe width="250" height="250" src="<?php i("eo_dzogchen"); ?>" frameborder="0" allowfullscreen></iframe></div>
+						<div class="video"><iframe width="400" height="300" src="<?php i("eo_dzogchen"); ?>" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
 						<div class="right-side">
@@ -605,7 +688,7 @@ table {
 							<span class="clear"></span>
 							<p> <?php i("programme_p_yy"); ?> </p>
 						</div>
-						<div class="video video-left"><iframe width="250" height="250" src="<?php i("eo_yy"); ?>" frameborder="0" allowfullscreen></iframe></div>
+						<div class="video video-left"><iframe width="400" height="300" src="<?php i("eo_yy"); ?>" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
 						<div class="left-side">
@@ -614,7 +697,7 @@ table {
 							<span class="clear"></span>
 							<p><?php i("programme_p_vd"); ?></p>
 						</div>
-						<div class="video"><iframe width="250" height="250" src="<?php i("eo_vd"); ?>" frameborder="0" allowfullscreen></iframe></div>
+						<div class="video"><iframe width="400" height="300" src="<?php i("eo_vd"); ?>" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 					<div class="table-row">
 						<div class="right-side">
@@ -623,16 +706,27 @@ table {
 							<span class="clear"></span>
 							<p><?php i("programme_p_kh"); ?></p>
 						</div>
-						<div class="video video-left"><iframe width="250" height="250" src="<?php i("eo_kh"); ?>" frameborder="0" allowfullscreen></iframe></div>
+						<div class="video video-left"><iframe width="400" height="300" src="<?php i("eo_kh"); ?>" frameborder="0" allowfullscreen></iframe></div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section id="donation" class="red">
+		<?php } ?>
+		<?php if ($lang == "en") { ?>
+		<section id="donation" class="gray">
+		<?php } else { ?>
+		<section id="donation">
+		<?php } ?>
 			<div class="center">
 				<h4><?php i("menu_fee"); ?></h4>
 				<hr />
-				<h5><?php i("donation_h2"); ?></h5>
+				<div id="thermometer">
+					<div>
+						<hr class="whole" />
+						<hr class="active" />
+					</div>
+				</div>
+				<p><?php i("donation_h2"); ?></p>
 				<p class="before"><?php i("donation_p"); ?></p>
 				<div class="table">
 					<div class="table-row">
@@ -648,7 +742,11 @@ table {
 				</div>
 			</div>
 		</section>
+		<?php if ($lang != "en") { ?>
 		<section id="venue" class="gray">
+		<?php } else { ?>
+		<section id="venue">
+		<?php } ?>
 			<div class="center">
 				<h4><?php i("menu_venue"); ?></h4>
 				<hr />
@@ -658,6 +756,9 @@ table {
 				</div>
 				<h6><?php i("venue_h6"); ?></h6>
 				<p><?php i("venue_p1"); ?></p>
+				<a href="https://goo.gl/maps/va8d4R7M8eJ2">
+					<img src="/img/pin.png" id="pin" class="mkcenter" />
+				</a>
 				<hr />
 				<h6><?php i("venue_h6_2"); ?></h6>
 				<p><?php i("venue_p2"); ?></p>
@@ -723,6 +824,11 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
 					scrollTop: ($($anchor.attr('href')).offset().top - 82)
         }, 499, 'easeInOutExpo');
         event.preventDefault(); });
+		var hash = window.location.hash;
+		if (hash.length > 3) {
+			$('html, body').stop().animate({
+				scrollTop: ($(hash).offset().top - 82)
+			}, 499, 'easeInOutExpo'); }
 		$(".hamburger a").click(function(){
 			$("div.menu").toggleClass("shown"); }); });
 </script>
