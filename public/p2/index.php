@@ -575,7 +575,7 @@ table {
 
 </style>
 
-<title></title>
+<title>Chögyal Namkhai Norbu - Prague 2016</title>
 </head>
 
 <body>
