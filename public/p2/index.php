@@ -40,6 +40,8 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="<?php i("meta_desc"); ?>">
+<meta name="keywords" content="<?php i("meta_keywords"); ?>">
 
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -122,7 +124,6 @@ table {
 		background-repeat: repeat-x; 
 		top: 66px;
 		left: 0px;
-		z-index: 1000;
 		width: 100%;
 		height: 16px;
 		position: fixed; }
@@ -485,7 +486,7 @@ table {
 	section#donation #thermometer hr.active {
 		left: 0px;
 		top: 0px;
-		width: 33.8%;
+		width: <?php i("eo_donation_percent"); ?>%;
 		border: 10px solid #840c20;
 		position: absolute; }
 	section#donation p { 
