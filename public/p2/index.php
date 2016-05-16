@@ -42,7 +42,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <style>
 html, body, div, span, applet, object, iframe,
@@ -118,7 +118,7 @@ table {
 		color: white;
 		height: 66px; }
 	header div.stripe {
-		background-image: url("/img/stripe.png"); 
+		background-image: url("<?php echo $img_path; ?>/stripe.png"); 
 		background-repeat: repeat-x; 
 		top: 66px;
 		left: 0px;
@@ -155,7 +155,7 @@ table {
 	header div#rinpoche-picture div {
 		height: 100%;
 		width: 100%;
-		background-image: url("/img/rinpoche_transparent.png");
+		background-image: url("<?php echo $img_path; ?>/rinpoche_transparent.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: left 0px; }
@@ -173,7 +173,7 @@ table {
 		height: 100%;
 		width: 100%;
 		background-size: cover;
-		background-image: url("/img/background.png"); } 
+		background-image: url("<?php echo $img_path; ?>/background.png"); } 
 
 	#header-text-1, #header-text-2 { 
 		padding: 0px 20px;
@@ -581,7 +581,7 @@ table {
 <body>
 	<header>
 		<nav>
-			<a class="page-scroll" id="header-logo" href="#header-part-1"><img src="/img/idc_logo.png" /></a>
+			<a class="page-scroll" id="header-logo" href="#header-part-1"><img src="<?php echo $img_path; ?>/idc_logo.png" /></a>
 			<div class="menu">
 				<a class="page-scroll" href="#teacher"><?php i("menu_teacher"); ?></a> 
 				<span>|</span>
@@ -632,7 +632,7 @@ table {
 				<div class="table">
 					<div class="table-row">
 						<div class="text"> <?php i("teacher_col_2"); ?> </div>
-						<div><img src="/img/rinpoche_small.png" /></div>
+						<div><img src="<?php echo $img_path; ?>/rinpoche_small.png" /></div>
 						<span class="clear"></span>
 						<div class="text mobile-row"> 
 							<?php i("teacher_col_4"); ?> 
@@ -752,12 +752,12 @@ table {
 				<hr />
 				<h5><?php i("venue_h2"); ?></h5>
 				<div class="responsive-image">
-					<img src="/img/foto_palac.jpg" class="mkcenter" />
+					<img src="<?php echo $img_path; ?>/foto_palac.jpg" class="mkcenter" />
 				</div>
 				<h6><?php i("venue_h6"); ?></h6>
 				<p><?php i("venue_p1"); ?></p>
 				<a href="https://goo.gl/maps/va8d4R7M8eJ2">
-					<img src="/img/pin.png" id="pin" class="mkcenter" />
+					<img src="<?php echo $img_path; ?>/pin.png" id="pin" class="mkcenter" />
 				</a>
 				<hr />
 				<h6><?php i("venue_h6_2"); ?></h6>
@@ -803,7 +803,7 @@ table {
 						<div>
 							<h6><?php i("contact_social"); ?></h6>
 							<a href="https://www.facebook.com/events/914385668683147/">
-								<img src="/img/FB-f-Logo__blue_50.png" />
+								<img src="<?php echo $img_path; ?>/FB-f-Logo__blue_50.png" />
 							</a>
 						</div>
 					</div>
