@@ -120,6 +120,7 @@ table {
 		color: white;
 		height: 66px; }
 	header div.stripe {
+		z-index: 1000;
 		background-image: url("<?php echo $img_path; ?>/stripe.png"); 
 		background-repeat: repeat-x; 
 		top: 66px;
