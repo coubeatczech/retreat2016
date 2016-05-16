@@ -500,6 +500,9 @@ table {
 		max-width: 400px; 
 		padding:0px 40px; }
 	section#donation h6 { text-align: center; }
+	section#donation input[type="image"] {
+		margin: 0px auto;
+		display: block; }
 	@media (max-width:780px) {
 		section#donation .table-row div { 
 			margin: 0px auto;
