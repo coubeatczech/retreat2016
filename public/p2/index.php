@@ -116,7 +116,7 @@ table {
 		top: 0px;
 		left: 0px;
 		width: 100%;
-		z-index: 998;
+		z-index: 1001;
 		color: white;
 		height: 66px; }
 	header div.stripe {
