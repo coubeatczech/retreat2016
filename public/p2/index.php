@@ -473,7 +473,6 @@ table {
 		margin: 40px auto;
 		max-width: 500px }
 	section#donation #thermometer hr {
-		
 		margin: 0px;
 		max-width: 100%;
 		height: 0px;
@@ -526,11 +525,15 @@ table {
 		margin: 20px 0px; }
 	section#venue ul li { 
 		line-height: 1.3em;
-		text-align: center; 
+		text-align: left; 
 		font-family: "Open Sans"; }
 	section#venue ul li a { text-decoration: underline }
 	section#venue img#pin { 
 		margin: 40px auto; }
+	section#venue p, section#venue ul {
+		text-align: left;
+		margin: 0px auto;
+		max-width: 750px; }
 
 	footer#contact hr { 
 		max-width: 400px; 
