@@ -9,6 +9,8 @@
 	if (! isset($_GET["lang"])) {
 		$user_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 		switch ($user_lang){
+			case "ru":
+				redirect('/retreat/ru/', false);
 			case "cs":
 				redirect('/retreat/cs/', false);
 			default:
@@ -16,7 +18,7 @@
 				break; } }
 
 	$lang = $_GET["lang"];
-	if ($lang != "en" && $lang != "cs") {
+	if ($lang != "en" && $lang != "cs" && $lang != "ru") {
 		die; }
 
 	$mysqli = new mysqli("localhost", $db_user, $db_pass, $db_database);
@@ -238,7 +240,7 @@ table {
 		 header .mobile { display: none; } }
 
 	/* menu */
-	@media (max-width: 1012px) {
+	@media (max-width: 1032px) {
 		header nav div.hamburger {
 			display: block; }
 		header nav div.menu.shown {
@@ -605,6 +607,8 @@ table {
 				<a href="/aktuality/puvodni-homepage/"><?php i("menu_original_page"); ?></a>
 				<span>|</span>
 				<a href="<?php i("menu_lang_link"); ?>"><?php i("menu_lang"); ?></a>
+				<span>|</span>
+				<a href="<?php i("menu_lang_link_2"); ?>"><?php i("menu_lang_2"); ?></a>
 			</div>
 			<div class="hamburger">
 				<a href="javascript://">Menu <i class="glyphicon glyphicon-menu-hamburger"></i></a>
@@ -677,7 +681,7 @@ table {
 				<p> <?php i("programme_slovakia"); ?> </p>
 			</div>
 		</section>
-		<?php if ($lang != "en") { ?>
+		<?php if ($lang == "cs") { ?>
 		<section class="gray" id="activities">
 			<div class="center">
 				<div class="table">
@@ -721,7 +725,7 @@ table {
 			</div>
 		</section>
 		<?php } ?>
-		<?php if ($lang == "en") { ?>
+		<?php if ($lang != "cs") { ?>
 		<section id="donation" class="gray">
 		<?php } else { ?>
 		<section id="donation">
@@ -751,7 +755,7 @@ table {
 				</div>
 			</div>
 		</section>
-		<?php if ($lang != "en") { ?>
+		<?php if ($lang == "cs") { ?>
 		<section id="venue" class="gray">
 		<?php } else { ?>
 		<section id="venue">
@@ -811,7 +815,7 @@ table {
 						</div>
 						<div>
 							<h6><?php i("contact_social"); ?></h6>
-							<a href="https://www.facebook.com/events/914385668683147/">
+							<a href="<?php i("event_link"); ?>">
 								<img src="<?php echo $img_path; ?>/FB-f-Logo__blue_50.png" />
 							</a>
 						</div>
