@@ -240,7 +240,7 @@ table {
 		 header .mobile { display: none; } }
 
 	/* menu */
-	@media (max-width: 1032px) {
+	@media (max-width: 1112px) {
 		header nav div.hamburger {
 			display: block; }
 		header nav div.menu.shown {
