@@ -773,6 +773,9 @@ table {
 					<img src="<?php echo $img_path; ?>/pin.png" id="pin" class="mkcenter" />
 				</a>
 				<hr />
+				<h6><?php i("venue_h6_portal"); ?></h6> <!-- portals -->
+				<?php i("venue_p_portal"); ?>
+				<hr />
 				<h6><?php i("venue_h6_2"); ?></h6> <!-- housing near -->
 				<p><?php i("venue_p2"); ?></p>
 				<hr />
