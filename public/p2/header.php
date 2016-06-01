@@ -1,7 +1,7 @@
 <?php
 
 	ob_start();
-	
+
 	include "/var/www/retreat2016/database.php";
 
 	function redirect($url, $permanent = false) {
@@ -549,16 +549,6 @@ table {
 	footer i.glyphicon { font-size: 3em; display: block; }
 	footer div.table-row div { padding: 0px 20px; }
 
-	main.registration p {
-		margin-top: 10px; }
-	main.registration ul {
-		margin-bottom: 40px }
-	main.registration input[type="text"], main.registration input[type="submit"] {
-		margin: 10px 0 40px 0; }
-	main.registration input[type="text"] {
-		max-width: 400px; }
-	main.registration input[type="submit"] {
-		max-width: 250px; }
 	footer form input {
 		margin-top: 20px;
 		max-width: 300px; }
@@ -601,11 +591,12 @@ table {
 
 	main.registration hr {
 		border-color: #fff;
-		margin-bottom: 40px;
+		margin-bottom: 50px;
 		max-width: 100px; }
 	main.registration section div.center {
 		max-width: 600px; }
 	main.registration h6 {
+		line-height: 1.25em;
 		margin-bottom: 0; }
 	main.registration ul li label {
 		font-family: "Open Sans";
@@ -615,8 +606,38 @@ table {
 		min-height: 100%; }
 	main.registration input[name="amount"] {
 		display: inline; }
+	main.registration .pre_amount input[type="text"] {
+		display: inline;
+		margin-left: 15px }
+	main.registration p {
+		margin-top: 10px; }
+	main.registration ul {
+		margin-bottom: 50px }
+	main.registration input[type="text"], main.registration input[type="submit"] {
+		margin: 10px 0 0 0; }
+	main.registration input[type="text"] {
+		max-width: 400px; }
+	main.registration input[type="submit"] {
+		max-width: 250px; }
+	main.registration .error { margin: 0 0 50px 0; }
+	main.registration div.error {
+		color: yellow;
+		font-family: "Open Sans"; }
+	a.registration {
+		background-color: #f2e3dc;
+		display: inline-block;
+		line-height: 2em;
+		font-size: 1em;
+		font-weight: bold;
+		font-family: "Open Sans";
+		padding: 5px 30px;
+		border: 1px solid #f2e3dc;
+		border-radius: 13px;
+		color: #000;
+		text-transform: uppercase; }
 
 </style>
+<?php echo $header_styles; ?>
 
 <title><?php i("title"); ?></title>
 </head>
