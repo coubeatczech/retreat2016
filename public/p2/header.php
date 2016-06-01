@@ -593,6 +593,8 @@ table {
 			padding: 0px; } }
 
 	a.registration {
+		position: relative;
+		z-index: 999;
 		background-color: #f2e3dc;
 		display: inline-block;
 		line-height: 2em;

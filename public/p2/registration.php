@@ -48,6 +48,7 @@
 	main.registration div.error {
 		color: yellow;
 		font-family: "Open Sans"; }
+
 </style>
 <?php
 	$header_styles = ob_get_clean();
@@ -64,7 +65,6 @@
 			$mail_body = $results_array["form_mail_wire"]; }
 		else if ($q4 == "cash") {
 			$mail_body = $results_array["form_mail_cash"]; }
-		else { die; } 
 		return strtr($mail_body, $translation); }
 
 	$q1 = $mysqli->real_escape_string($_POST["q1"]);
@@ -93,7 +93,10 @@ create table rregistration (
 
 			$q2 = $mysqli->real_escape_string($_POST["q2"]);
 			$q3 = $mysqli->real_escape_string($_POST["q3"]);
-			$q4 = $mysqli->real_escape_string($_POST["q4"]);
+			if ($amount == 0) {
+				$q4 = "n/a"; }
+			else {
+				$q4 = $mysqli->real_escape_string($_POST["q4"]); }
 			$note = $mysqli->real_escape_string($_POST["note"]);
 			$amount = $mysqli->real_escape_string($_POST["amount"]);
 
