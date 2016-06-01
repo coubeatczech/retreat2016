@@ -552,7 +552,10 @@ table {
 	footer form input {
 		margin-top: 20px;
 		max-width: 300px; }
-	footer form input, main.registration input[type="text"], main.registration input[type="submit"] {
+	footer form input, 
+	main.registration textarea ,
+	main.registration input[type="text"], 
+	main.registration input[type="submit"] {
 		border: 0px;
 		font-family: "Open Sans";
 		padding-left: 20px;
@@ -589,40 +592,6 @@ table {
 		footer#contact .table .table-row div {
 			padding: 0px; } }
 
-	main.registration hr {
-		border-color: #fff;
-		margin-bottom: 50px;
-		max-width: 100px; }
-	main.registration section div.center {
-		max-width: 600px; }
-	main.registration h6 {
-		line-height: 1.25em;
-		margin-bottom: 0; }
-	main.registration ul li label {
-		font-family: "Open Sans";
-		margin-left: 10px; }
-	.min100 {
-		background-color: #840c20;
-		min-height: 100%; }
-	main.registration input[name="amount"] {
-		display: inline; }
-	main.registration .pre_amount input[type="text"] {
-		display: inline;
-		margin-left: 15px }
-	main.registration p {
-		margin-top: 10px; }
-	main.registration ul {
-		margin-bottom: 50px }
-	main.registration input[type="text"], main.registration input[type="submit"] {
-		margin: 10px 0 0 0; }
-	main.registration input[type="text"] {
-		max-width: 400px; }
-	main.registration input[type="submit"] {
-		max-width: 250px; }
-	main.registration .error { margin: 0 0 50px 0; }
-	main.registration div.error {
-		color: yellow;
-		font-family: "Open Sans"; }
 	a.registration {
 		background-color: #f2e3dc;
 		display: inline-block;
