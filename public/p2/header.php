@@ -578,11 +578,10 @@ table {
 		text-transform: none; }
 	footer .table-row div a.twitter { 
 		margin-left: 7.5px;
-		margin-top: 7.5px; }
+		margin-top: -12.5px; }
 	footer .table-row div a { 
 		float:left;
 		display: block;
-		margin-top: 20px;
 		font-family: "Open Sans"; }
 	@media (min-width: 781px) and (max-width: 1100px) {
 		footer#contact .table .table-row div.first-row {
