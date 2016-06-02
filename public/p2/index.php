@@ -234,6 +234,9 @@
 							<a href="<?php i("event_link"); ?>">
 								<img src="<?php echo $img_path; ?>/FB-f-Logo__blue_50.png" />
 							</a>
+							<a class="twitter" href="<?php i("twitter_link"); ?>">
+								<img src="<?php echo $img_path; ?>/twitter75.png" />
+							</a>
 						</div>
 					</div>
 				</div>

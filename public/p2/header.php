@@ -576,7 +576,11 @@ table {
 		text-align: center; }
 	footer form input[type="text"], main.registration input[type="text"] {
 		text-transform: none; }
+	footer .table-row div a.twitter { 
+		margin-left: 7.5px;
+		margin-top: 7.5px; }
 	footer .table-row div a { 
+		float:left;
 		display: block;
 		margin-top: 20px;
 		font-family: "Open Sans"; }
@@ -592,6 +596,8 @@ table {
 		footer#contact .table .table-row div {
 			padding: 0px; } }
 
+	a.registration:hover {
+		text-decoration: none; }
 	a.registration {
 		position: relative;
 		z-index: 999;
