@@ -65,6 +65,8 @@
 			$mail_body = $results_array["form_mail_wire"]; }
 		else if ($q4 == "cash") {
 			$mail_body = $results_array["form_mail_cash"]; }
+		else {
+			$mail_body = $results_array["form_mail_none"]; }
 		return strtr($mail_body, $translation); }
 
 	$q1 = $mysqli->real_escape_string($_POST["q1"]);
@@ -125,7 +127,7 @@ create table rregistration (
 
 			$mgClient->sendMessage($domain, array(
 				'from'    => 'Registration Form <no-reply@dzogchen.cz>' ,
-				'to'      => "ryskajakub@seznam.cz" ,
+				'to'      => "yellow@dzogchen.cz" ,
 				'subject' => "Nová registrace: $name" ,
 				'text'    => "$mail_to_yellow"));
 
