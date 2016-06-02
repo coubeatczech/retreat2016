@@ -32,6 +32,9 @@
 	main.registration input[name="amount"] {
 		display: inline; }
 	main.registration .pre_amount input[type="text"] {
+		padding-right: 15px;
+		max-width: 150px;
+		text-align: right;
 		display: inline;
 		margin-left: 15px }
 	main.registration p {
