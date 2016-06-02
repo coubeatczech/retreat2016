@@ -248,7 +248,7 @@ create table rregistration (
 	<script type="text/javascript">
 		$(".pre_amount input").on('input propertychange paste',function (e) {
 			var v = $(this).val();
-			if (isNaN(v)) {
+			if (isNaN(v) || v.trim() == "") {
 				$(".n_error").show();
 				$('input[type="submit"]').attr("disabled", "disabled"); }
 			else {	
