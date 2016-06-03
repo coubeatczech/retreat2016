@@ -60,6 +60,10 @@
 
 	$formsubmitted = $_GET["formsubmitted"];
 
+	$client = new \Http\Adapter\Guzzle6\Client();
+	$mgClient = new \Mailgun\Mailgun('key-6585e0828401fa0c238949215f8ce647', $client);
+	$domain = "dzogchen.cz";
+
 	function get_mail_body($q4, $translation) {
 		global $results_array;
 		if ($q4 == "paypal") {
@@ -71,6 +75,20 @@
 		else {
 			$mail_body = $results_array["form_mail_none"]; }
 		return strtr($mail_body, $translation); }
+	function send_confirm_mail ($email, $mail_body) {
+		global $mgClient;
+		global $domain;
+		global $results_array;
+		// Make the call to the client.
+		try {
+			$result = $mgClient->sendMessage($domain, array(
+				'from'    => 'Yellow Gakyil <yellow@dzogchen.cz>',
+				'to'      =>  "$email",
+				'subject' => $results_array["mail_header"],
+				'html'    => "$mail_body")); 
+			return true; }
+		catch (Exception $e) {
+			return false; } }
 
 	$q1 = $mysqli->real_escape_string($_POST["q1"]);
 	if ($q1) {
@@ -108,28 +126,17 @@ create table rregistration (
 			$hash = bin2hex(mcrypt_create_iv(22, MCRYPT_DEV_URANDOM));
 			$sql = "insert into rregistration values ('$hash', '$email', '$name', '$q1', '$q2', '$q3', '$q4', '$note',  '$amount', '$amount_code', 'no')";
 			$mysqli->query($sql);
-
-			$translation = array("%amount%" => $amount, "%method%" => $q4, "%name%" => $name, "%email%" => $email);
-			$mail_body = get_mail_body($q4, $translation);
-
 			// insert into db
+
+			if ($q4 != "paypal") {
+				$translation = array("%amount%" => $amount, "%method%" => $q4, "%name%" => $name, "%email%" => $email);
+				$mail_body = get_mail_body($q4, $translation); 
+				$error_amount = !send_confirm_mail($email, $mail_body); }
+			else {
+				$error_mail = false; }
 		
 			// send mail
-			$client = new \Http\Adapter\Guzzle6\Client();
-			$mgClient = new \Mailgun\Mailgun('key-6585e0828401fa0c238949215f8ce647', $client);
-			$domain = "dzogchen.cz";
-
-			// Make the call to the client.
-			try {
-				$result = $mgClient->sendMessage($domain, array(
-					'from'    => 'Yellow Gakyil <yellow@dzogchen.cz>',
-					'to'      =>  "$name <$email>",
-					'subject' => $results_array["mail_header"],
-					'html'    => "$mail_body")); }
-			catch (Exception $e) {
-				$error_email = true; }
 			if (!$error_email) {
-
 				$mail_to_yellow = "Jméno:$name\nEmail:$email\nČástka:$amount_code $amount\nMetoda:$q4\nKód:$hash\nŽidle:$q1\nBabysitting:$q2\nObědy:$q3\nPoznámka:$note";
 
 				$mgClient->sendMessage($domain, array(
@@ -237,8 +244,9 @@ create table rregistration (
 						$email = $row["email"];
 						$amount = $row["amount"];
 						$translation = array("%amount%" => $amount, "%method%" => $method, "%name%" => $name, "%email%" => $email);
-						$body = get_mail_body($method, $translation);
 						if ($row["q4"] == "paypal") {
+							$body = get_mail_body($method, $translation);
+							send_confirm_mail ($email, $body);
 							$u_query = "update rregistration set payment_success = 'OK' where hash ='$h'";
 							$mysqli->query($u_query); }
 					?>
