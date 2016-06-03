@@ -77,7 +77,7 @@
 		$name = $mysqli->real_escape_string($_POST["name"]);
 		$email = $mysqli->real_escape_string($_POST["email"]);
 		$amount = $mysqli->real_escape_string($_POST["amount"]);
-		$amount_code = "CZK";
+		$amount_code = $results_array["form_currency"];
 		$error_amount = !is_numeric($amount);
 		$error_name = empty($name);
 		$error_email = empty($email); 
