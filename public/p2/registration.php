@@ -244,11 +244,11 @@ create table rregistration (
 						$email = $row["email"];
 						$amount = $row["amount"];
 						$translation = array("%amount%" => $amount, "%method%" => $method, "%name%" => $name, "%email%" => $email);
+						$body = get_mail_body($method, $translation);
 						if ($row["q4"] == "paypal") {
-							$body = get_mail_body($method, $translation);
-							send_confirm_mail ($email, $body);
 							$u_query = "update rregistration set payment_success = 'OK' where hash ='$h'";
-							$mysqli->query($u_query); }
+							$mysqli->query($u_query);
+							send_confirm_mail ($email, $body); }
 					?>
 					<p><?php echo $body; ?></p>
 				<?php } ?>
