@@ -120,30 +120,34 @@ create table rregistration (
 			$domain = "dzogchen.cz";
 
 			// Make the call to the client.
-			$result = $mgClient->sendMessage($domain, array(
-				'from'    => 'Yellow Gakyil <yellow@dzogchen.cz>',
-				'to'      =>  "$name <$email>",
-				'subject' => $results_array["mail_header"],
-				'html'    => "$mail_body"));
+			try {
+				$result = $mgClient->sendMessage($domain, array(
+					'from'    => 'Yellow Gakyil <yellow@dzogchen.cz>',
+					'to'      =>  "$name <$email>",
+					'subject' => $results_array["mail_header"],
+					'html'    => "$mail_body")); }
+			catch (Exception $e) {
+				$error_email = true; }
+			if (!$error_email) {
 
-			$mail_to_yellow = "Jméno:$name\nEmail:$email\nČástka:$amount_code $amount\nMetoda:$q4\nKód:$hash\nŽidle:$q1\nBabysitting:$q2\nObědy:$q3\nPoznámka:$note";
+				$mail_to_yellow = "Jméno:$name\nEmail:$email\nČástka:$amount_code $amount\nMetoda:$q4\nKód:$hash\nŽidle:$q1\nBabysitting:$q2\nObědy:$q3\nPoznámka:$note";
 
-			$mgClient->sendMessage($domain, array(
-				'from'    => 'Registration Form <no-reply@dzogchen.cz>' ,
-				'to'      => "yellow@dzogchen.cz" ,
-				'subject' => "Nová registrace: $name" ,
-				'text'    => "$mail_to_yellow"));
+				$mgClient->sendMessage($domain, array(
+					'from'    => 'Registration Form <no-reply@dzogchen.cz>' ,
+					'to'      => "yellow@dzogchen.cz" ,
+					'subject' => "Nová registrace: $name" ,
+					'text'    => "$mail_to_yellow"));
 
-			if ($q4 == "paypal") {
-				$item = $hash;
-				$currency = $amount_code;
-				$paramName = "formsubmitted";
-				$paramValue = $hash;
-				$newURL = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=yellow%40dzogchen%2ecz&lc=CZ&item_name=Mezinarodni%20komunita%20dzogchenu%20Kunkyabling%2c%20z%2es%2e&item_number=$item&amount=$amount%2e00&currency_code=$currency&no_note=1&no_shipping=1&rm=1&return=https%3a%2f%2fwww%2edzogchen%2ecz%2fregistration%2f$lang%2f%3f$paramName%3d$paramValue&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"; }
-			else {
-				$newURL = strtok($_SERVER["REQUEST_URI"],'?') . "?formsubmitted=$hash"; }
-			header ('Location: ' . $newURL);
-			exit(); } }
+				if ($q4 == "paypal") {
+					$item = $hash;
+					$currency = $amount_code;
+					$paramName = "formsubmitted";
+					$paramValue = $hash;
+					$newURL = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=yellow%40dzogchen%2ecz&lc=CZ&item_name=Mezinarodni%20komunita%20dzogchenu%20Kunkyabling%2c%20z%2es%2e&item_number=$item&amount=$amount%2e00&currency_code=$currency&no_note=1&no_shipping=1&rm=1&return=https%3a%2f%2fwww%2edzogchen%2ecz%2fregistration%2f$lang%2f%3f$paramName%3d$paramValue&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"; }
+				else {
+					$newURL = strtok($_SERVER["REQUEST_URI"],'?') . "?formsubmitted=$hash"; }
+				header ('Location: ' . $newURL);
+				exit(); } } }
 
 	$page = 'registration';
 	echo ob_get_clean(); ?>
