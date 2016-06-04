@@ -3,7 +3,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 
 define('APPLICATION_NAME', 'Google Sheets API PHP Quickstart');
-define('CREDENTIALS_PATH', '~/.credentials/sheets.googleapis.com-php-quickstart.json');
+define('CREDENTIALS_PATH', __DIR__ . '/../sheets.googleapis.com-php-quickstart.json');
 define('CLIENT_SECRET_PATH', __DIR__ . '/../client_secret.json');
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/sheets.googleapis.com-php-quickstart.json
@@ -23,7 +23,7 @@ function getClient() {
   $client->setAccessType('offline');
 
   // Load previously authorized credentials from a file.
-  $credentialsPath = expandHomeDirectory(CREDENTIALS_PATH);
+  $credentialsPath = CREDENTIALS_PATH;
   if (file_exists($credentialsPath)) {
     $accessToken = file_get_contents($credentialsPath);
   } else {
@@ -98,7 +98,7 @@ function saveRows ($rows) {
 			'appendCells' => array(
 				'sheetId' => 0 ,
 				'fields' => '*' ,
-				'rows' => $newRows )));
+				'rows' => $newRows)));
 
 	 $batchUpdateRequest = new Google_Service_Sheets_BatchUpdateSpreadsheetRequest(array(
 		 'requests' => $requests));

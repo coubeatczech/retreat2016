@@ -1,6 +1,7 @@
 <?php
 
 	require 'vendor/autoload.php';
+	require 'quickstart.php';
 	use Mailgun\Mailgun;
 
 	ob_start();
@@ -111,7 +112,7 @@ create table rregistration (
 	note varchar (10000),
 	amount varchar (100), 
 	amount_code varchar(100),
-	payment_success varchar(100);
+	payment_success varchar(100),
 	timestamp varchar(100));
 */
 
@@ -129,6 +130,7 @@ create table rregistration (
 			$sql = "insert into rregistration values ('$hash', '$email', '$name', '$q1', '$q2', '$q3', '$q4', '$note',  '$amount', '$amount_code', 'no', '$now')";
 			$mysqli->query($sql);
 			// insert into db
+			saveRows(array(array($hash, $email, $name, $q1, $q2, $q3, $q4, $amount, $amount_code, 'no', $note, $now)));	
 
 			if ($q4 != "paypal") {
 				$translation = array("%amount%" => $amount, "%method%" => $q4, "%name%" => $name, "%email%" => $email);
