@@ -111,7 +111,8 @@ create table rregistration (
 	note varchar (10000),
 	amount varchar (100), 
 	amount_code varchar(100),
-	payment_success varchar(100));
+	payment_success varchar(100);
+	timestamp varchar(100));
 */
 
 			$q2 = $mysqli->real_escape_string($_POST["q2"]);
@@ -123,8 +124,9 @@ create table rregistration (
 			$note = $mysqli->real_escape_string($_POST["note"]);
 			$amount = $mysqli->real_escape_string($_POST["amount"]);
 
+			$now = date("Y-m-d H:i:s");
 			$hash = bin2hex(mcrypt_create_iv(22, MCRYPT_DEV_URANDOM));
-			$sql = "insert into rregistration values ('$hash', '$email', '$name', '$q1', '$q2', '$q3', '$q4', '$note',  '$amount', '$amount_code', 'no')";
+			$sql = "insert into rregistration values ('$hash', '$email', '$name', '$q1', '$q2', '$q3', '$q4', '$note',  '$amount', '$amount_code', 'no', '$now')";
 			$mysqli->query($sql);
 			// insert into db
 
@@ -137,7 +139,7 @@ create table rregistration (
 		
 			// send mail
 			if (!$error_email) {
-				$mail_to_yellow = "Jméno:$name\nEmail:$email\nČástka:$amount_code $amount\nMetoda:$q4\nKód:$hash\nŽidle:$q1\nBabysitting:$q2\nObědy:$q3\nPoznámka:$note";
+				$mail_to_yellow = "Jméno:$name\nEmail:$email\nČástka:$amount_code $amount\nMetoda:$q4\nKód:$hash\nŽidle:$q1\nBabysitting:$q2\nObědy:$q3\nPoznámka:$note\nDate:$now";
 
 				$mgClient->sendMessage($domain, array(
 					'from'    => 'Registration Form <no-reply@dzogchen.cz>' ,
@@ -150,7 +152,7 @@ create table rregistration (
 					$currency = $amount_code;
 					$paramName = "formsubmitted";
 					$paramValue = $hash;
-					$newURL = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=yellow%40dzogchen%2ecz&lc=CZ&item_name=Mezinarodni%20komunita%20dzogchenu%20Kunkyabling%2c%20z%2es%2e&item_number=$item&amount=$amount%2e00&currency_code=$currency&no_note=1&no_shipping=1&rm=1&return=https%3a%2f%2fwww%2edzogchen%2ecz%2fregistration%2f$lang%2f%3f$paramName%3d$paramValue&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"; }
+					$newURL = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=yellow%40dzogchen%2ecz&lc=CZ&item_name=Mezinarodni%20komunita%20dzogchenu%20Kunkyabling%2c%20z%2es%2e&item_number=$item&amount=$amount%2e00&currency_code=$currency&no_note=1&no_shipping=1&rm=1&return=https%3a%2f%2fd2%2ejakubryska%2ename%2fregistration%2f$lang%2f%3f$paramName%3d$paramValue&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"; }
 				else {
 					$newURL = strtok($_SERVER["REQUEST_URI"],'?') . "?formsubmitted=$hash"; }
 				header ('Location: ' . $newURL);
