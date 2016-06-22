@@ -5,6 +5,7 @@
 	use Mailgun\Mailgun;
 
 	ob_start();
+
 ?>
 <style>
 

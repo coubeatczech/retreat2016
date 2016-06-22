@@ -32,6 +32,11 @@
 			<div id="background2">
 				<div id="header-part-1">
 					<div id="header-text-1">
+						<h3>
+							<img src="<?php echo $img_path; ?>/trik_left.png" />
+							<span><?php i("h1_top"); ?></span>
+							<img src="<?php echo $img_path; ?>/trik_right.png" />
+						</h3>
 						<h1><?php i("h1"); ?></h1>
 					</div>
 					<div id="rinpoche-picture">
