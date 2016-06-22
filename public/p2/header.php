@@ -171,6 +171,18 @@ table {
 		margin: 15px 0px; }
 	header div#header-text-2 p {
 		margin-top: 40px; }
+	header div#header-text-1 h3 {
+		margin-top: 10px;
+		position: relative;
+		margin-bottom: 20px; }
+	header div#header-text-1 h3 span {
+		padding-right: 7px;
+		padding-left: 7px; }
+	header div#header-text-1 h3 img {
+		height: 70%;
+		width: auto;
+		position: relative;
+		bottom: -2px; }
 	header div#background1 {
 		height: 100%;
 		width: 100%;
