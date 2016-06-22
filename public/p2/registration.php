@@ -154,7 +154,7 @@ create table rregistration (
 					$currency = $amount_code;
 					$paramName = "formsubmitted";
 					$paramValue = $hash;
-					$newURL = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=yellow%40dzogchen%2ecz&lc=CZ&item_name=Mezinarodni%20komunita%20dzogchenu%20Kunkyabling%2c%20z%2es%2e&item_number=$item&amount=$amount%2e00&currency_code=$currency&no_note=1&no_shipping=1&rm=1&return=https%3a%2f%2fd2%2ejakubryska%2ename%2fregistration%2f$lang%2f%3f$paramName%3d$paramValue&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"; }
+					$newURL = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=yellow%40dzogchen%2ecz&lc=CZ&item_name=Mezinarodni%20komunita%20dzogchenu%20Kunkyabling%2c%20z%2es%2e&item_number=$item&amount=$amount%2e00&currency_code=$currency&no_note=1&no_shipping=1&rm=1&return=https%3a%2f%2fwww%2edzogchen%2ecz%2fregistration%2f$lang%2f%3f$paramName%3d$paramValue&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"; }
 				else {
 					$newURL = strtok($_SERVER["REQUEST_URI"],'?') . "?formsubmitted=$hash"; }
 				header ('Location: ' . $newURL);
