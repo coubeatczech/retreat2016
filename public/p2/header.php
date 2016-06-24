@@ -203,7 +203,7 @@ table {
 	#header-text-1 { 
 		width: 70%;
 		margin-left: 30%;
-		padding: 8% 0px 0px 0px; }
+		padding: 5% 0px 0px 0px; }
 	#header-text-2 hr {
 		width: 100px; }
 
