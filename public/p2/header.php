@@ -95,6 +95,34 @@ table {
 	border-spacing: 0;
 }
 
+#my-rein p, #my-rein h3, #my-rein strong { font-family: 'Open Sans'; }
+#my-rein strong { 
+	font-weight: 700;
+	font-size: 1.5em;
+	padding-bottom: 15px;
+	display: block; }
+#my-rein span {
+	padding: 15px;
+	cursor: pointer;
+	position: absolute;
+	right: 15%;
+	top: 0px;
+	font-size: 3em; }
+#my-rein h3 {
+	text-transform: none;
+	padding: 15px 0;
+	text-decoration: underline;
+	font-size: 2.2em; }
+#my-rein p {
+	padding-bottom: 15px; }
+#my-rein {
+	z-index: 100000;
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	padding: 0px 15%;
+	background-color: rgba(255,255,255,0.95); }
+
 	main, header, footer { min-width: 300px; }
 
 	html, body { 
@@ -188,6 +216,7 @@ table {
 		width: 100%;
 		padding-top: 82px; }
 	header div#background2 {
+		position: relative;
 		height: 100%;
 		width: 100%;
 		background-size: cover;
@@ -216,6 +245,29 @@ table {
 
 	h2 { font-size: 2em; }
 
+	#media { position: relative; }
+	#media table { 
+		table-layout: fixed;
+		width: 100%; }
+	#media table td { width: 1% }
+	#media table td img { width: 100%; height: auto; }
+
+	.social-media { 
+		right: 0px;
+		top: 0px;
+		z-index: 1;
+		position: absolute; }
+	.social-media a { 
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: inline-block;
+		width: 50px; 
+		height: 66px; }
+	.social-media a.fb { 
+		background-image: url("<?php echo $img_path; ?>/FB-f-Logo__blue_29.png"); }
+	.social-media a.tw { 
+		background-image: url("<?php echo $img_path; ?>/Twitter_Logo_Blue_28.png"); }
+
 	/* above the fold */
 	@media (min-width: 1000px) and (max-width: 1305px) {
 		header div#rinpoche-picture div { 
@@ -232,6 +284,11 @@ table {
 			padding-top: 300px; }
 		header div#rinpoche-picture div {
 			background-position: -100px 0px; } }
+
+	@media (max-width: 767px) {
+		#my-rein { 
+			top: 150px;
+			bottom:auto; } }
 
 	@media (max-width: 767px), (max-height:600px) {
 		header { height: auto; }

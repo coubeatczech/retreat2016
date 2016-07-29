@@ -1,7 +1,7 @@
 <?php 
 	$page = "retreat";
 	include "header.php"; 
-	echo ob_get_clean(); ?>
+	echo ob_get_clean (); ?>
 
 	<header>
 		<nav>
@@ -30,6 +30,10 @@
 		<div class="stripe"></div>
 		<div id="background1">
 			<div id="background2">
+				<div class="social-media">
+					<a class="fb" href="<?php i("event_link"); ?>"></a>
+					<a class="tw" href="<?php i("twitter_link"); ?>"></a>
+				</div>
 				<div id="header-part-1">
 					<div id="header-text-1">
 						<h3>
@@ -52,6 +56,14 @@
 				</div>
 			</div>
 		</div>
+	<?php if ($lang == "cs") { ?>
+		<div id="my-rein">
+			<h3>Moje reinkarnace</h3>
+			<p>U příležitosti návštěvy Čhogjala Namkhai Norbu v Praze uvede) Česká televize uvede výjimečný dokument Moje reinkarnace. </p>
+			<strong>Moje reinkarnace, ČT&nbsp;2, neděle 31.7, 23:20</strong>
+			<span>❌</span>
+		</div>
+	<?php } ?>
 	</header>
 	<main>
 		<section id="teacher" class="gray">
@@ -205,6 +217,28 @@
 				<ul><?php i("venue_li_2"); ?></ul>
 			</div>
 		</section>
+<!--
+		<section id="media">
+			<div class="center">
+				<h4>Mejidální panteři</h4>
+				<hr />
+				<table>
+					<tr>
+						<td><img src="https://www.cocacola.co.uk/content/dam/GO/CokeZone/Common/global/logo/logodesktop/coca-cola-logo-260x260.png" /></td>
+						<td><img src="https://www.cocacola.co.uk/content/dam/GO/CokeZone/Common/global/logo/logodesktop/coca-cola-logo-260x260.png" /></td>
+						<td><img src="https://www.cocacola.co.uk/content/dam/GO/CokeZone/Common/global/logo/logodesktop/coca-cola-logo-260x260.png" /></td>
+						<td><img src="https://www.cocacola.co.uk/content/dam/GO/CokeZone/Common/global/logo/logodesktop/coca-cola-logo-260x260.png" /></td>
+					</tr>
+					<tr>
+						<td><img src="https://www.cocacola.co.uk/content/dam/GO/CokeZone/Common/global/logo/logodesktop/coca-cola-logo-260x260.png" /></td>
+						<td><img src="https://www.cocacola.co.uk/content/dam/GO/CokeZone/Common/global/logo/logodesktop/coca-cola-logo-260x260.png" /></td>
+						<td><img src="https://www.cocacola.co.uk/content/dam/GO/CokeZone/Common/global/logo/logodesktop/coca-cola-logo-260x260.png" /></td>
+						<td><img src="https://www.cocacola.co.uk/content/dam/GO/CokeZone/Common/global/logo/logodesktop/coca-cola-logo-260x260.png" /></td>
+					</tr>
+				</table>
+			</div>
+		</section>
+-->
 		<footer id="contact" class="red">
 			<div class="center">
 				<h4><?php i("menu_contact"); ?></h4>
