@@ -118,7 +118,7 @@ create table rregistration (
 */
 
 			$q2 = $mysqli->real_escape_string($_POST["q2"]);
-			$q3 = $mysqli->real_escape_string($_POST["q3"]);
+			$q3 = "closed reg";
 			if ($amount == 0) {
 				$q4 = "n/a"; }
 			else {
@@ -199,16 +199,6 @@ create table rregistration (
 						<ul>
 							<li><input id="q21" type="radio" name="q2" value="no" checked /><label for="q21"><?php i("form_no"); ?></label></li>
 							<li><input id="q22" type="radio" name="q2" value="yes" /><label for="q22"><?php i("form_yes"); ?></label></li>
-						</ul>
-					</div>
-					<div>
-						<h6><?php i("form_meal"); ?></h6>
-						<p><?php i("form_meal_p"); ?></p>
-						<ul>
-							<li><input id="q31" type="radio" name="q3" value="none" checked /><label for="q31"><?php i("form_meal_option_1"); ?></label></li>
-							<li><input id="q32" type="radio" name="q3" value="saturday" /><label for="q32"><?php i("form_meal_option_2"); ?></label></li>
-							<li><input id="q33" type="radio" name="q3" value="sunday" /><label for="q33"><?php i("form_meal_option_3"); ?></label></li>
-							<li><input id="q34" type="radio" name="q3" value="both" /><label for="q34"><?php i("form_meal_option_4"); ?></label></li>
 						</ul>
 					</div>
 					<div>

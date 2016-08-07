@@ -59,8 +59,8 @@
 	<?php if ($lang == "cs") { ?>
 		<div id="my-rein">
 			<h3>Moje reinkarnace</h3>
-			<p>U příležitosti návštěvy Čhogjala Namkhai Norbu v Praze uvede) Česká televize uvede výjimečný dokument Moje reinkarnace. </p>
-			<strong>Moje reinkarnace, ČT&nbsp;2, neděle 31.7, 23:20</strong>
+			<p>U příležitosti návštěvy Čhögjala Namkhai Norbu v Praze odvysílala Česká televize výjimečný dokument Moje reinkarnace.</p>
+			<strong>Repríza: ČT&nbsp;2, úterý 2.8, 23:55, ke shlédnutí <a href="http://www.ceskatelevize.cz/porady/11528430690-moje-reinkarnace/21638256199">online zde</a></strong>
 			<span>❌</span>
 		</div>
 	<?php } ?>
@@ -199,7 +199,7 @@
 				</div>
 				<h6><?php i("venue_h6"); ?></h6>
 				<p><?php i("venue_p1"); ?></p>
-				<a href="https://goo.gl/maps/va8d4R7M8eJ2">
+				<a target="_blank" href="https://goo.gl/maps/va8d4R7M8eJ2">
 					<img src="<?php echo $img_path; ?>/pin.png" id="pin" class="mkcenter" />
 				</a>
 				<hr />

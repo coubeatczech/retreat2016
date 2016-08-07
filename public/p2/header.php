@@ -115,10 +115,11 @@ table {
 	font-size: 2.2em; }
 #my-rein p {
 	padding-bottom: 15px; }
+#my-rein a { text-decoration: underline; }
 #my-rein {
-	z-index: 100000;
+	z-index: 999;
 	position: absolute;
-	bottom: 50px;
+	bottom: 25px;
 	width: 100%;
 	padding: 0px 15%;
 	background-color: rgba(255,255,255,0.95); }
@@ -287,8 +288,11 @@ table {
 
 	@media (max-width: 767px) {
 		#my-rein { 
-			top: 150px;
+			top: 250px;
 			bottom:auto; } }
+	
+	@media (min-width: 1023px) and (max-width: 1025px) and (min-height: 767px) and (max-height: 769px) {
+		#my-rein { bottom: 12px; } }
 
 	@media (max-width: 767px), (max-height:600px) {
 		header { height: auto; }
