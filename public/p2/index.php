@@ -11,9 +11,9 @@
 				<span>|</span>
 				<a class="page-scroll" href="#programme"><?php i("menu_programme"); ?></a>
 				<span>|</span>
-				<a class="page-scroll" href="#donation"><?php i("menu_fee"); ?></a>
-				<span>|</span>
 				<a class="page-scroll" href="#venue"><?php i("menu_venue"); ?></a>
+				<span>|</span>
+				<a class="page-scroll" href="#donation"><?php i("menu_fee"); ?></a>
 				<span>|</span>
 				<a class="page-scroll" href="#contact"><?php i("menu_contact"); ?></a>
 				<span>|</span>
@@ -156,36 +156,6 @@
 		</section>
 		<?php } ?>
 		<?php if ($lang != "cs") { ?>
-		<section id="donation" class="gray">
-		<?php } else { ?>
-		<section id="donation">
-		<?php } ?>
-			<div class="center">
-				<h4><?php i("menu_fee"); ?></h4>
-				<hr />
-				<div id="thermometer">
-					<div>
-						<hr class="whole" />
-						<hr class="active" />
-					</div>
-				</div>
-				<p><?php i("donation_h2"); ?></p>
-				<p class="before"><?php i("donation_p"); ?></p>
-				<div class="table">
-					<div class="table-row">
-						<div>
-							<h6><?php i("donation_h3_1"); ?></h6>
-							<?php i("donation_p1"); ?>
-						</div>
-						<div>
-							<h6><?php i("donation_h3_2"); ?></h6>
-							<?php i("donation_p2"); ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<?php if ($lang == "cs") { ?>
 		<section id="venue" class="gray">
 		<?php } else { ?>
 		<section id="venue">
@@ -215,6 +185,36 @@
 				<ul><?php i("venue_li_1"); ?></ul>
 				<strong class="h7"><?php i("venue_h7_2"); ?></strong> <!-- camps -->
 				<ul><?php i("venue_li_2"); ?></ul>
+			</div>
+		</section>
+		<?php if ($lang == "cs") { ?>
+		<section id="donation" class="gray">
+		<?php } else { ?>
+		<section id="donation">
+		<?php } ?>
+			<div class="center">
+				<h4><?php i("menu_fee"); ?></h4>
+				<hr />
+				<div id="thermometer">
+					<div>
+						<hr class="whole" />
+						<hr class="active" />
+					</div>
+				</div>
+				<p><?php i("donation_h2"); ?></p>
+				<p class="before"><?php i("donation_p"); ?></p>
+				<div class="table">
+					<div class="table-row">
+						<div>
+							<h6><?php i("donation_h3_1"); ?></h6>
+							<?php i("donation_p1"); ?>
+						</div>
+						<div>
+							<h6><?php i("donation_h3_2"); ?></h6>
+							<?php i("donation_p2"); ?>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 <!--
