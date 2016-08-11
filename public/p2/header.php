@@ -572,6 +572,10 @@ table {
 		text-align: left; }
 	section#donation p.before { 
 		margin-top: inherit; }
+	section#donation p.after { 
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 750px; }
 	section#donation hr { max-width: 400px; }
 	section#donation .table-row div { 
 		max-width: 400px; 

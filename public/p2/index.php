@@ -215,9 +215,10 @@
 						</div>
 					</div>
 				</div>
+				<p class="after"><?php i("donation_after"); ?></p>
 			</div>
 		</section>
-<!--
+<?php /*
 		<section id="media">
 			<div class="center">
 				<h4>Mejidální panteři</h4>
